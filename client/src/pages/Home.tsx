@@ -4,7 +4,7 @@ import { Shield, Palette, Sprout, Combine, Bug, ServerCog, Ruler, Weight, Rotate
 
 export default function Home() {
   return (
-    <div className="pt-16">
+    <div className="pt-24">
       {/* Hero Section */}
       <section className="min-h-screen gradient-bg flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

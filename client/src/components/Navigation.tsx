@@ -126,21 +126,24 @@ export default function Navigation() {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navItems.map((item) => (
-                <div key={item.path} className="relative group">
+                <div 
+                  key={item.path} 
+                  className="relative group"
+                  onMouseEnter={() => item.hasDropdown && setShowProductsDropdown(true)}
+                  onMouseLeave={() => item.hasDropdown && setShowProductsDropdown(false)}
+                >
                   <Link
                     href={item.path}
-                    className={`flex items-center space-x-1 transition-all duration-300 font-semibold py-2 px-4 rounded-full group-hover:bg-white/10 ${
+                    className={`flex items-center space-x-1 transition-all duration-300 font-semibold py-3 px-4 rounded-full ${
                       isActive(item.path)
                         ? isScrolled 
-                          ? "text-brand-blue bg-blue-50" 
-                          : "text-white bg-white/20"
+                          ? "text-brand-blue bg-blue-50 shadow-sm" 
+                          : "text-white bg-white/20 shadow-lg"
                         : isScrolled 
-                          ? "text-gray-700 hover:text-brand-blue" 
-                          : "text-white/90 hover:text-white"
+                          ? "text-gray-800 hover:text-brand-blue hover:bg-blue-50" 
+                          : "text-white hover:text-white hover:bg-white/20 text-shadow"
                     }`}
                     data-testid={`link-${item.label.toLowerCase()}`}
-                    onMouseEnter={() => item.hasDropdown && setShowProductsDropdown(true)}
-                    onMouseLeave={() => item.hasDropdown && setShowProductsDropdown(false)}
                   >
                     <span>{item.label}</span>
                     {item.hasDropdown && (
@@ -153,10 +156,11 @@ export default function Navigation() {
                   {/* Products Dropdown */}
                   {item.hasDropdown && showProductsDropdown && (
                     <div 
-                      className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200/50 p-6 opacity-0 animate-in fade-in-0 zoom-in-95 duration-200"
-                      style={{ animation: 'fadeIn 0.3s ease-out forwards' }}
-                      onMouseEnter={() => setShowProductsDropdown(true)}
-                      onMouseLeave={() => setShowProductsDropdown(false)}
+                      className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200/50 p-6"
+                      style={{ 
+                        animation: 'fadeIn 0.3s ease-out forwards',
+                        zIndex: 9999
+                      }}
                     >
                       <div className="space-y-3">
                         {productDropdownItems.map((dropItem, index) => (

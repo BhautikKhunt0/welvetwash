@@ -6,8 +6,10 @@ export default function Home() {
   return (
     <div className="pt-24">
       {/* Hero Section */}
-      <section className="min-h-screen gradient-bg flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="min-h-screen gradient-bg flex items-center relative">
+        {/* Background overlay for better navbar visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-white">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">

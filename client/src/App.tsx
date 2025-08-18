@@ -4,6 +4,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
@@ -12,7 +13,7 @@ import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
-    <div className="font-inter bg-slate-50">
+    <div className="font-inter bg-slate-50 dark:bg-slate-900">
       <Navigation />
       <Switch>
         <Route path="/" component={Home} />
@@ -21,6 +22,7 @@ function Router() {
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
+      <Footer />
     </div>
   );
 }

@@ -14,10 +14,10 @@ export const quoteRequests = pgTable("quote_requests", {
   firstName: text("first_name").notNull(),
   lastName: text("last_name").notNull(),
   email: text("email").notNull(),
-  phone: text("phone"),
-  company: text("company"),
-  quantity: text("quantity"),
-  message: text("message"),
+  phone: text("phone").default(""),
+  company: text("company").default(""),
+  quantity: text("quantity").default(""),
+  message: text("message").default(""),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 

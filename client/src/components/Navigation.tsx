@@ -51,38 +51,11 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Top Contact Bar */}
-      <div className={`bg-slate-900 text-white text-sm transition-all duration-300 ${
-        isScrolled ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-2">
-            <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-3 h-3" />
-                <span>1-800-CLEANPOD</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-3 h-3" />
-                <span>info@cleanpodspro.com</span>
-              </div>
-            </div>
-            <div className="hidden md:flex items-center space-x-4 text-xs">
-              <span className="flex items-center space-x-1">
-                <Zap className="w-3 h-3 text-yellow-400" />
-                <span>Free Shipping on Orders $50+</span>
-              </span>
-              <span className="text-green-400">✓ 24/7 Support Available</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
           ? 'bg-white/98 backdrop-blur-xl shadow-2xl border-b border-gray-200/30' 
-          : 'bg-transparent mt-8'
+          : 'bg-white/95 backdrop-blur-md shadow-lg'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`flex justify-between items-center transition-all duration-500 ${
@@ -110,12 +83,12 @@ export default function Navigation() {
               </div>
               
               <div className="flex flex-col">
-                <span className={`font-black transition-all duration-500 bg-gradient-to-r from-gray-900 to-blue-900 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:to-cyan-600 ${
+                <span className={`font-black transition-all duration-500 text-gray-900 group-hover:text-brand-blue ${
                   isScrolled ? 'text-xl' : 'text-2xl'
                 }`}>
                   CleanPods Pro
                 </span>
-                <span className={`text-xs bg-gradient-to-r from-brand-blue to-brand-cyan bg-clip-text text-transparent font-semibold transition-all duration-500 ${
+                <span className={`text-xs text-brand-blue font-semibold transition-all duration-500 ${
                   isScrolled ? 'opacity-0 h-0' : 'opacity-100 h-auto'
                 }`}>
                   5-in-1 Revolutionary Technology
@@ -136,12 +109,8 @@ export default function Navigation() {
                     href={item.path}
                     className={`flex items-center space-x-1 transition-all duration-300 font-semibold py-3 px-4 rounded-full ${
                       isActive(item.path)
-                        ? isScrolled 
-                          ? "text-brand-blue bg-blue-50 shadow-sm" 
-                          : "text-white bg-white/20 shadow-lg"
-                        : isScrolled 
-                          ? "text-gray-800 hover:text-brand-blue hover:bg-blue-50" 
-                          : "text-white hover:text-white hover:bg-white/20 text-shadow"
+                        ? "text-brand-blue bg-blue-50 shadow-sm" 
+                        : "text-gray-800 hover:text-brand-blue hover:bg-blue-50"
                     }`}
                     data-testid={`link-${item.label.toLowerCase()}`}
                   >
@@ -191,11 +160,7 @@ export default function Navigation() {
             {/* CTA Button */}
             <div className="flex items-center space-x-4">
               <Link href="/contact" data-testid="button-get-quote">
-                <Button className={`relative overflow-hidden transition-all duration-300 font-bold rounded-full px-8 py-3 shadow-xl hover:shadow-2xl hover:scale-105 group ${
-                  isScrolled 
-                    ? 'bg-gradient-to-r from-brand-blue to-brand-cyan text-white hover:from-blue-700 hover:to-cyan-700' 
-                    : 'bg-white text-brand-blue hover:bg-gray-100'
-                }`}>
+                <Button className="relative overflow-hidden transition-all duration-300 font-bold rounded-full px-8 py-3 shadow-xl hover:shadow-2xl hover:scale-105 group bg-gradient-to-r from-brand-blue to-brand-cyan text-white hover:from-blue-700 hover:to-cyan-700">
                   <span className="relative z-10 flex items-center space-x-2">
                     <Zap className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
                     <span>Get Quote</span>
@@ -210,11 +175,7 @@ export default function Navigation() {
               <Button
                 variant="ghost"
                 size="icon"
-                className={`lg:hidden p-3 rounded-full transition-all duration-300 ${
-                  isScrolled 
-                    ? 'text-gray-700 hover:text-brand-blue hover:bg-blue-50' 
-                    : 'text-white hover:text-gray-200 hover:bg-white/10'
-                }`}
+                className="lg:hidden p-3 rounded-full transition-all duration-300 text-gray-700 hover:text-brand-blue hover:bg-blue-50"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 data-testid="button-mobile-menu"
               >

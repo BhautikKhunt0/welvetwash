@@ -19,6 +19,7 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -98,63 +99,86 @@ export default function Navigation() {
             
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <div 
-                  key={item.path} 
-                  className="relative group"
-                  onMouseEnter={() => item.hasDropdown && setShowProductsDropdown(true)}
-                  onMouseLeave={() => item.hasDropdown && setShowProductsDropdown(false)}
-                >
-                  <Link
-                    href={item.path}
-                    className={`flex items-center space-x-1 transition-all duration-300 font-semibold py-3 px-4 rounded-full ${
-                      isActive(item.path)
-                        ? "text-brand-blue bg-blue-50 shadow-sm" 
-                        : "text-gray-800 hover:text-brand-blue hover:bg-blue-50"
-                    }`}
-                    data-testid={`link-${item.label.toLowerCase()}`}
-                  >
-                    <span>{item.label}</span>
-                    {item.hasDropdown && (
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                        showProductsDropdown ? 'rotate-180' : ''
-                      }`} />
-                    )}
-                  </Link>
+              {navItems.map((item) => {
+                const handleMouseEnter = () => {
+                  if (item.hasDropdown) {
+                    if (dropdownTimeout) {
+                      clearTimeout(dropdownTimeout);
+                      setDropdownTimeout(null);
+                    }
+                    setShowProductsDropdown(true);
+                  }
+                };
 
-                  {/* Products Dropdown */}
-                  {item.hasDropdown && showProductsDropdown && (
-                    <div 
-                      className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200/50 p-6"
-                      style={{ 
-                        animation: 'fadeIn 0.3s ease-out forwards',
-                        zIndex: 9999
-                      }}
+                const handleMouseLeave = () => {
+                  if (item.hasDropdown) {
+                    const timeout = setTimeout(() => {
+                      setShowProductsDropdown(false);
+                    }, 300);
+                    setDropdownTimeout(timeout);
+                  }
+                };
+
+                return (
+                  <div 
+                    key={item.path} 
+                    className="relative group"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <Link
+                      href={item.path}
+                      className={`flex items-center space-x-1 transition-all duration-300 font-semibold py-3 px-4 rounded-full ${
+                        isActive(item.path)
+                          ? "text-brand-blue bg-blue-50 shadow-sm" 
+                          : "text-gray-800 hover:text-brand-blue hover:bg-blue-50"
+                      }`}
+                      data-testid={`link-${item.label.toLowerCase()}`}
                     >
-                      <div className="space-y-3">
-                        {productDropdownItems.map((dropItem, index) => (
-                          <Link
-                            key={index}
-                            href="/products"
-                            className="flex items-start space-x-3 p-3 rounded-xl hover:bg-blue-50 transition-colors duration-200 group"
-                          >
-                            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
-                              <dropItem.icon className="w-5 h-5 text-white" />
-                            </div>
-                            <div className="flex-1">
-                              <div className="font-semibold text-gray-900 group-hover:text-brand-blue transition-colors">
-                                {dropItem.label}
+                      <span>{item.label}</span>
+                      {item.hasDropdown && (
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                          showProductsDropdown ? 'rotate-180' : ''
+                        }`} />
+                      )}
+                    </Link>
+
+                    {/* Products Dropdown */}
+                    {item.hasDropdown && showProductsDropdown && (
+                      <div 
+                        className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200/50 p-6"
+                        style={{ 
+                          animation: 'fadeIn 0.3s ease-out forwards',
+                          zIndex: 9999
+                        }}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                      >
+                        <div className="space-y-3">
+                          {productDropdownItems.map((dropItem, index) => (
+                            <Link
+                              key={index}
+                              href="/products"
+                              className="flex items-start space-x-3 p-3 rounded-xl hover:bg-blue-50 transition-colors duration-200 group"
+                            >
+                              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
+                                <dropItem.icon className="w-5 h-5 text-white" />
                               </div>
-                              <div className="text-sm text-gray-600">{dropItem.desc}</div>
-                            </div>
-                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-brand-blue group-hover:translate-x-1 transition-all duration-200" />
-                          </Link>
-                        ))}
+                              <div className="flex-1">
+                                <div className="font-semibold text-gray-900 group-hover:text-brand-blue transition-colors">
+                                  {dropItem.label}
+                                </div>
+                                <div className="text-sm text-gray-600">{dropItem.desc}</div>
+                              </div>
+                              <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-brand-blue group-hover:translate-x-1 transition-all duration-200" />
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              ))}
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
             {/* CTA Button */}
@@ -179,18 +203,11 @@ export default function Navigation() {
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 data-testid="button-mobile-menu"
               >
-                <div className="relative w-6 h-6">
-                  <div className={`absolute inset-0 transition-all duration-300 ${
-                    isMobileMenuOpen ? 'rotate-90 opacity-0' : 'rotate-0 opacity-100'
-                  }`}>
-                    <Menu className="w-6 h-6" />
-                  </div>
-                  <div className={`absolute inset-0 transition-all duration-300 ${
-                    isMobileMenuOpen ? 'rotate-0 opacity-100' : 'rotate-90 opacity-0'
-                  }`}>
-                    <X className="w-6 h-6" />
-                  </div>
-                </div>
+                {isMobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
               </Button>
             </div>
           </div>
@@ -213,7 +230,7 @@ export default function Navigation() {
                       ? "text-brand-blue bg-blue-50 border-blue-200 shadow-sm"
                       : "text-gray-700 hover:bg-gray-50 hover:text-brand-blue border-transparent hover:border-gray-200"
                   }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
+
                   data-testid={`mobile-link-${item.label.toLowerCase()}`}
                 >
                   <div className="flex items-center justify-between">
@@ -224,7 +241,7 @@ export default function Navigation() {
               ))}
               
               <div className="pt-4 border-t border-gray-200 mt-6">
-                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/contact">
                   <Button className="w-full bg-gradient-to-r from-brand-blue to-brand-cyan text-white hover:from-blue-700 hover:to-cyan-700 transition-all font-bold rounded-xl py-4 shadow-lg">
                     <Zap className="w-5 h-5 mr-2" />
                     Get Your Quote Now

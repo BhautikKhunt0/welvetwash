@@ -32,8 +32,7 @@ export default function Home() {
                 </Link>
                 <Link href="/contact">
                   <Button 
-                    variant="outline" 
-                    className="border-2 border-white text-white hover:bg-white hover:text-brand-blue transition-all px-8 py-4 rounded-full font-semibold"
+                    className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105 px-8 py-4 rounded-full font-semibold shadow-lg"
                     data-testid="button-get-quote-hero"
                   >
                     Get Quote

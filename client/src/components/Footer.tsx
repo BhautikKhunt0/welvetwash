@@ -146,15 +146,15 @@ export default function Footer() {
             <div className="mt-8 p-4 bg-white/5 rounded-lg border border-white/10">
               <h5 className="font-semibold mb-2">Stay Updated</h5>
               <p className="text-sm text-gray-300 mb-3">Get the latest news and exclusive offers.</p>
-              <div className="flex space-x-2">
+              <div className="flex flex-col space-y-2">
                 <input 
                   type="email" 
                   placeholder="Your email"
-                  className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-brand-blue text-sm"
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-brand-blue text-sm"
                   data-testid="input-newsletter-email"
                 />
-                <Button className="bg-brand-blue hover:bg-blue-700 px-4 py-2 text-sm" data-testid="button-newsletter-subscribe">
-                  Join
+                <Button className="w-full bg-brand-blue hover:bg-blue-700 px-4 py-2 text-sm rounded-lg" data-testid="button-newsletter-subscribe">
+                  Subscribe to Newsletter
                 </Button>
               </div>
             </div>

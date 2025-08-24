@@ -231,64 +231,107 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trusted by Thousands */}
-      <section className="py-20 bg-gray-100 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Trusted by Thousands</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Join the growing community of satisfied customers who have revolutionized their laundry routine
+      {/* Trusted by Thousands - Redesigned */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-cyan-900/20 relative overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-400/20 to-teal-400/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Header Section */}
+          <div className="text-center mb-20">
+            <div className="inline-block mb-4">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent text-sm font-semibold tracking-wider uppercase">
+                Our Impact
+              </span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-cyan-700 bg-clip-text text-transparent mb-6">
+              Trusted by Thousands
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Join the global community of satisfied customers who have revolutionized their laundry experience with our innovative solutions
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+          {/* Statistics Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Happy Customers */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-center transform group-hover:scale-105 transition-all duration-300 shadow-xl">
+                <div className="mb-6">
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Users className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-3" data-testid="text-happy-customers">
+                  10,000+
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 font-medium text-lg">Happy Customers</p>
+                <div className="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="text-happy-customers">10,000+</div>
-              <p className="text-gray-600 dark:text-gray-300 font-medium">Happy Customers</p>
             </div>
 
-            <div className="text-center bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+            {/* Orders Delivered */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-center transform group-hover:scale-105 transition-all duration-300 shadow-xl">
+                <div className="mb-6">
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <TrendingUp className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-3" data-testid="text-orders-delivered">
+                  50,000+
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 font-medium text-lg">Orders Delivered</p>
+                <div className="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="text-orders-delivered">50,000+</div>
-              <p className="text-gray-600 dark:text-gray-300 font-medium">Orders Delivered</p>
             </div>
 
-            <div 
-              className="text-center p-6 rounded-xl shadow-lg"
-              style={{ 
-                backgroundColor: '#f97316', 
-                color: 'white' 
-              }}
-            >
-              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-white" />
+            {/* Average Rating */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-orange-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-center transform group-hover:scale-105 transition-all duration-300 shadow-xl">
+                <div className="mb-6">
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Star className="w-10 h-10 text-white fill-current" />
+                  </div>
+                </div>
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mb-3" data-testid="text-average-rating">
+                  4.9/5
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 font-medium text-lg">Average Rating</p>
+                <div className="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-amber-500 to-orange-500 rounded-full"></div>
               </div>
-              <div 
-                className="text-3xl font-bold mb-2" 
-                style={{ color: 'white' }}
-                data-testid="text-average-rating"
-              >
-                4.9/5
-              </div>
-              <p 
-                className="font-medium"
-                style={{ color: 'white' }}
-              >
-                Average Rating
-              </p>
             </div>
 
-            <div className="text-center bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-white" />
+            {/* Industry Awards */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-center transform group-hover:scale-105 transition-all duration-300 shadow-xl">
+                <div className="mb-6">
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Award className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3" data-testid="text-industry-awards">
+                  15+
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 font-medium text-lg">Industry Awards</p>
+                <div className="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="text-industry-awards">15+</div>
-              <p className="text-gray-600 dark:text-gray-300 font-medium">Industry Awards</p>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-16">
+            <div className="inline-flex items-center px-6 py-3 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm border border-white/30 rounded-full">
+              <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+              <span className="text-gray-700 dark:text-gray-300 font-medium">Trusted worldwide since 2020</span>
             </div>
           </div>
         </div>

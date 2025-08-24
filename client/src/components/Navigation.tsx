@@ -198,19 +198,31 @@ export default function Navigation() {
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item) => (
                 <div key={item.path}>
-                  <Link
-                    href={item.path}
-                    onClick={closeMobileMenu}
-                    className={`flex items-center space-x-3 w-full p-3 rounded-lg text-left transition-all duration-200 ${
-                      isActive(item.path)
-                        ? "bg-blue-50 text-blue-700 border border-blue-200"
-                        : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                    }`}
-                    data-testid={`mobile-link-${item.label.toLowerCase()}`}
-                  >
-                    <item.icon className="w-5 h-5" />
-                    <span className="font-medium">{item.label}</span>
-                  </Link>
+                  {item.hasDropdown ? (
+                    // Non-clickable header for Products with dropdown
+                    <div
+                      className="flex items-center space-x-3 w-full p-3 rounded-lg text-left transition-all duration-200 text-gray-600 bg-gray-50 border border-gray-200"
+                      data-testid={`mobile-header-${item.label.toLowerCase()}`}
+                    >
+                      <item.icon className="w-5 h-5" />
+                      <span className="font-medium">{item.label}</span>
+                    </div>
+                  ) : (
+                    // Clickable link for other navigation items
+                    <Link
+                      href={item.path}
+                      onClick={closeMobileMenu}
+                      className={`flex items-center space-x-3 w-full p-3 rounded-lg text-left transition-all duration-200 ${
+                        isActive(item.path)
+                          ? "bg-blue-50 text-blue-700 border border-blue-200"
+                          : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
+                      }`}
+                      data-testid={`mobile-link-${item.label.toLowerCase()}`}
+                    >
+                      <item.icon className="w-5 h-5" />
+                      <span className="font-medium">{item.label}</span>
+                    </Link>
+                  )}
                   
                   {/* Mobile Product Submenu */}
                   {item.hasDropdown && (

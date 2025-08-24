@@ -231,7 +231,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Trusted by Thousands */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Trusted by Thousands</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join the growing community of satisfied customers who have revolutionized their laundry routine
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-2" data-testid="text-happy-customers">10,000+</div>
+              <p className="text-gray-600 font-medium">Happy Customers</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-2" data-testid="text-orders-delivered">50,000+</div>
+              <p className="text-gray-600 font-medium">Orders Delivered</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Star className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-2" data-testid="text-average-rating">4.9/5</div>
+              <p className="text-gray-600 font-medium">Average Rating</p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Award className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-2" data-testid="text-industry-awards">15+</div>
+              <p className="text-gray-600 font-medium">Industry Awards</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Our Customers Say */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -242,57 +288,72 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-50 p-8 rounded-2xl" data-testid="testimonial-1">
+            <div className="bg-gray-50 p-8 rounded-2xl" data-testid="testimonial-1">
               <div className="flex items-center mb-4">
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-current" />
                   ))}
                 </div>
-                <span className="ml-2 text-gray-600">5.0</span>
+                <span className="ml-2 text-gray-600 font-medium">5.0</span>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-6 italic">
                 "These pods have completely changed my laundry routine. The cleaning power is incredible and my clothes smell amazing for weeks!"
               </p>
               <div className="flex items-center">
-                <Users className="w-6 h-6 text-blue-500 mr-2" />
-                <span className="font-semibold text-gray-900">Sarah Johnson</span>
+                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                  <Users className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">Sarah Johnson</div>
+                  <div className="text-sm text-gray-600">Home Owner</div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-slate-50 p-8 rounded-2xl" data-testid="testimonial-2">
+            <div className="bg-gray-50 p-8 rounded-2xl" data-testid="testimonial-2">
               <div className="flex items-center mb-4">
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-current" />
                   ))}
                 </div>
-                <span className="ml-2 text-gray-600">5.0</span>
+                <span className="ml-2 text-gray-600 font-medium">5.0</span>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-6 italic">
                 "As a busy mom of three, these pods save me so much time. One pod does the work of multiple products!"
               </p>
               <div className="flex items-center">
-                <Users className="w-6 h-6 text-blue-500 mr-2" />
-                <span className="font-semibold text-gray-900">Maria Rodriguez</span>
+                <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                  <Users className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">Maria Rodriguez</div>
+                  <div className="text-sm text-gray-600">Business Owner</div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-slate-50 p-8 rounded-2xl" data-testid="testimonial-3">
+            <div className="bg-gray-50 p-8 rounded-2xl" data-testid="testimonial-3">
               <div className="flex items-center mb-4">
                 <div className="flex text-yellow-400">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 fill-current" />
                   ))}
                 </div>
-                <span className="ml-2 text-gray-600">5.0</span>
+                <span className="ml-2 text-gray-600 font-medium">5.0</span>
               </div>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-6 italic">
                 "Professional quality results at home. My work clothes have never looked better. Highly recommend!"
               </p>
               <div className="flex items-center">
-                <Users className="w-6 h-6 text-blue-500 mr-2" />
-                <span className="font-semibold text-gray-900">David Chen</span>
+                <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                  <Users className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">David Chen</div>
+                  <div className="text-sm text-gray-600">Mother of 3</div>
+                </div>
               </div>
             </div>
           </div>

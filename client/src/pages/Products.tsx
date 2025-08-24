@@ -241,54 +241,57 @@ export default function Products() {
             <p className="text-xl text-gray-600">Authentic Laundry Detergent Pods - Professional Grade Quality</p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-900">Product Name</span>
-                  <span className="text-gray-600">Authentic Laundry Detergent Pods</span>
-                </div>
-                <div className="flex justify-between items-start border-b pb-4">
-                  <span className="font-semibold text-gray-900">Functions</span>
-                  <span className="text-gray-600 text-right">Detergent + Bacteria & Mites Removal 99.9% + Softener + Long Lasting Fragrances + Blend Enzymes</span>
-                </div>
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-900">Fragrances</span>
-                  <span className="text-gray-600">Customized / As shown in picture</span>
-                </div>
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-900">Color</span>
-                  <span className="text-gray-600">Customized / As shown in picture</span>
-                </div>
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-900">Weight</span>
-                  <span className="text-gray-600">15g*30pcs*32bag/Carton</span>
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-900">Film</span>
-                  <span className="text-gray-600">Water-soluble Film</span>
-                </div>
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-900">Packaging</span>
-                  <span className="text-gray-600">Boxes/Bags or Pouches/Cartons or customized</span>
-                </div>
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-900">Origin</span>
-                  <span className="text-gray-600">Guangzhou Guangdong Province, China</span>
-                </div>
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-900">Certificate</span>
-                  <span className="text-gray-600">ISO/MSDS/SMETA 6.1</span>
-                </div>
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-900">Order (MOQ)</span>
-                  <span className="text-gray-600">One Carton of spot goods/customized</span>
-                </div>
-              </div>
-            </div>
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-gradient-to-r from-cyan-50 to-blue-50 border-b border-gray-200">
+                  <th className="px-8 py-4 text-left text-lg font-semibold text-gray-900">Specification</th>
+                  <th className="px-8 py-4 text-left text-lg font-semibold text-gray-900">Details</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
+                  <td className="px-8 py-4 font-semibold text-gray-900">Product Name</td>
+                  <td className="px-8 py-4 text-gray-600">Authentic Laundry Detergent Pods</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
+                  <td className="px-8 py-4 font-semibold text-gray-900">Functions</td>
+                  <td className="px-8 py-4 text-gray-600">Detergent + Bacteria & Mites Removal 99.9% + Softener + Long Lasting Fragrances + Blend Enzymes</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
+                  <td className="px-8 py-4 font-semibold text-gray-900">Fragrances</td>
+                  <td className="px-8 py-4 text-gray-600">Customized / As shown in picture</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
+                  <td className="px-8 py-4 font-semibold text-gray-900">Color</td>
+                  <td className="px-8 py-4 text-gray-600">Customized / As shown in picture</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
+                  <td className="px-8 py-4 font-semibold text-gray-900">Weight</td>
+                  <td className="px-8 py-4 text-gray-600">15g*30pcs*32bag/Carton</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
+                  <td className="px-8 py-4 font-semibold text-gray-900">Film</td>
+                  <td className="px-8 py-4 text-gray-600">Water-soluble Film</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
+                  <td className="px-8 py-4 font-semibold text-gray-900">Packaging</td>
+                  <td className="px-8 py-4 text-gray-600">Boxes/Bags or Pouches/Cartons or customized</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
+                  <td className="px-8 py-4 font-semibold text-gray-900">Origin</td>
+                  <td className="px-8 py-4 text-gray-600">Guangzhou Guangdong Province, China</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
+                  <td className="px-8 py-4 font-semibold text-gray-900">Certificate</td>
+                  <td className="px-8 py-4 text-gray-600">ISO/MSDS/SMETA 6.1</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors duration-200">
+                  <td className="px-8 py-4 font-semibold text-gray-900 border-b-0">Order (MOQ)</td>
+                  <td className="px-8 py-4 text-gray-600 border-b-0">One Carton of spot goods/customized</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
           {/* Key Stats */}

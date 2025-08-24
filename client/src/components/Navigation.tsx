@@ -2,29 +2,26 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { 
-  Droplets, 
   Menu, 
   X, 
   ChevronDown, 
-  Zap, 
-  Shield, 
-  Star, 
+  Home,
+  Package,
+  Info,
+  MessageCircle,
   ArrowRight,
-  Phone,
-  Mail
+  Building
 } from "lucide-react";
 
 export default function Navigation() {
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showProductsDropdown, setShowProductsDropdown] = useState(false);
-  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 80);
+      setIsScrolled(scrollTop > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -32,16 +29,10 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { path: "/", label: "Home", hasDropdown: false },
-    { path: "/products", label: "Products", hasDropdown: true },
-    { path: "/about", label: "About", hasDropdown: false },
-    { path: "/contact", label: "Contact", hasDropdown: false },
-  ];
-
-  const productDropdownItems = [
-    { label: "5-in-1 Laundry Pods", desc: "Revolutionary cleaning technology", icon: Droplets },
-    { label: "Bulk Orders", desc: "Volume discounts available", icon: Star },
-    { label: "Free Samples", desc: "Try before you buy", icon: Shield },
+    { path: "/", label: "Home", icon: Home },
+    { path: "/products", label: "Products", icon: Package },
+    { path: "/about", label: "About", icon: Info },
+    { path: "/contact", label: "Contact", icon: MessageCircle },
   ];
 
   const isActive = (path: string) => {
@@ -50,163 +41,90 @@ export default function Navigation() {
     return false;
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <>
       {/* Main Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/98 backdrop-blur-xl shadow-2xl border-b border-gray-200/30' 
-          : 'bg-white/95 backdrop-blur-md shadow-lg'
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100' 
+          : 'bg-white/90 backdrop-blur-sm'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`flex justify-between items-center transition-all duration-500 ${
-            isScrolled ? 'h-16' : 'h-20'
-          }`}>
+          <div className="flex justify-between items-center h-16">
+            
             {/* Logo Section */}
-            <Link href="/" className="flex items-center space-x-4 group" data-testid="link-home">
-              <div className={`relative transition-all duration-500 ${
-                isScrolled ? 'w-12 h-12' : 'w-16 h-16'
-              }`}>
-                {/* Animated Background Circles */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-800 rounded-2xl transform rotate-6 group-hover:rotate-12 transition-transform duration-300"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 rounded-2xl transform -rotate-6 group-hover:-rotate-12 transition-transform duration-300 opacity-80"></div>
-                
-                {/* Main Logo Container */}
-                <div className="relative w-full h-full bg-gradient-to-r from-brand-blue via-brand-sky to-brand-cyan rounded-2xl flex items-center justify-center shadow-2xl group-hover:shadow-3xl group-hover:scale-105 transition-all duration-300">
-                  <Droplets className={`text-white transition-all duration-300 group-hover:rotate-12 ${
-                    isScrolled ? 'w-6 h-6' : 'w-8 h-8'
-                  }`} />
-                  
-                  {/* Floating Particles */}
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-bounce"></div>
-                  <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse delay-300"></div>
+            <Link 
+              href="/" 
+              className="flex items-center space-x-3 group" 
+              data-testid="link-home"
+              onClick={closeMobileMenu}
+            >
+              <div className="relative">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
+                  <Building className="w-6 h-6 text-white" />
                 </div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
               </div>
-              
               <div className="flex flex-col">
-                <span className={`font-black transition-all duration-500 text-gray-900 group-hover:text-brand-blue ${
-                  isScrolled ? 'text-xl' : 'text-2xl'
-                }`}>
+                <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                   CleanPods Pro
                 </span>
-                <span className={`text-xs text-brand-blue font-semibold transition-all duration-500 ${
-                  isScrolled ? 'opacity-0 h-0' : 'opacity-100 h-auto'
-                }`}>
-                  5-in-1 Revolutionary Technology
+                <span className="text-xs text-gray-500 hidden sm:block">
+                  Professional Cleaning
                 </span>
               </div>
             </Link>
             
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {navItems.map((item) => {
-                const handleMouseEnter = () => {
-                  if (item.hasDropdown) {
-                    if (dropdownTimeout) {
-                      clearTimeout(dropdownTimeout);
-                      setDropdownTimeout(null);
-                    }
-                    setShowProductsDropdown(true);
-                  }
-                };
-
-                const handleMouseLeave = () => {
-                  if (item.hasDropdown) {
-                    const timeout = setTimeout(() => {
-                      setShowProductsDropdown(false);
-                    }, 300);
-                    setDropdownTimeout(timeout);
-                  }
-                };
-
-                return (
-                  <div 
-                    key={item.path} 
-                    className="relative group"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <Link
-                      href={item.path}
-                      className={`flex items-center space-x-1 transition-all duration-300 font-semibold py-3 px-4 rounded-full ${
-                        isActive(item.path)
-                          ? "text-brand-blue bg-blue-50 shadow-sm" 
-                          : "text-gray-800 hover:text-brand-blue hover:bg-blue-50"
-                      }`}
-                      data-testid={`link-${item.label.toLowerCase()}`}
-                    >
-                      <span>{item.label}</span>
-                      {item.hasDropdown && (
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                          showProductsDropdown ? 'rotate-180' : ''
-                        }`} />
-                      )}
-                    </Link>
-
-                    {/* Products Dropdown */}
-                    {item.hasDropdown && showProductsDropdown && (
-                      <div 
-                        className="absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200/50 p-6"
-                        style={{ 
-                          animation: 'fadeIn 0.3s ease-out forwards',
-                          zIndex: 9999
-                        }}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                      >
-                        <div className="space-y-3">
-                          {productDropdownItems.map((dropItem, index) => (
-                            <Link
-                              key={index}
-                              href="/products"
-                              className="flex items-start space-x-3 p-3 rounded-xl hover:bg-blue-50 transition-colors duration-200 group"
-                            >
-                              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
-                                <dropItem.icon className="w-5 h-5 text-white" />
-                              </div>
-                              <div className="flex-1">
-                                <div className="font-semibold text-gray-900 group-hover:text-brand-blue transition-colors">
-                                  {dropItem.label}
-                                </div>
-                                <div className="text-sm text-gray-600">{dropItem.desc}</div>
-                              </div>
-                              <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-brand-blue group-hover:translate-x-1 transition-all duration-200" />
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                );
-              })}
+            <div className="hidden md:flex items-center space-x-1">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  href={item.path}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    isActive(item.path)
+                      ? "bg-blue-100 text-blue-700 shadow-sm" 
+                      : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+                  data-testid={`link-${item.label.toLowerCase()}`}
+                >
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.label}</span>
+                </Link>
+              ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="flex items-center space-x-4">
-              <Link href="/contact" data-testid="button-get-quote">
-                <Button className="relative overflow-hidden transition-all duration-300 font-bold rounded-full px-8 py-3 shadow-xl hover:shadow-2xl hover:scale-105 group bg-gradient-to-r from-brand-blue to-brand-cyan text-white hover:from-blue-700 hover:to-cyan-700">
-                  <span className="relative z-10 flex items-center space-x-2">
-                    <Zap className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
-                    <span>Get Quote</span>
-                  </span>
-                  
-                  {/* Animated background */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+            {/* Right Section */}
+            <div className="flex items-center space-x-3">
+              
+              {/* CTA Button */}
+              <Link href="/contact" data-testid="button-get-quote" className="hidden sm:block">
+                <Button 
+                  size="sm" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-200"
+                >
+                  Get Quote
+                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
 
               {/* Mobile Menu Button */}
               <Button
                 variant="ghost"
-                size="icon"
-                className="lg:hidden p-3 rounded-full transition-all duration-300 text-gray-700 hover:text-brand-blue hover:bg-blue-50"
+                size="sm"
+                className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 data-testid="button-mobile-menu"
+                aria-label="Toggle mobile menu"
               >
                 {isMobileMenuOpen ? (
-                  <X className="w-6 h-6" />
+                  <X className="w-5 h-5 text-gray-600" />
                 ) : (
-                  <Menu className="w-6 h-6" />
+                  <Menu className="w-5 h-5 text-gray-600" />
                 )}
               </Button>
             </div>
@@ -214,37 +132,36 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden transition-all duration-300 ${
+        <div className={`md:hidden transition-all duration-300 ease-in-out ${
           isMobileMenuOpen 
-            ? 'max-h-screen opacity-100' 
+            ? 'max-h-96 opacity-100' 
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
-          <div className="bg-white/98 backdrop-blur-xl border-t border-gray-200/50 shadow-2xl">
-            <div className="px-6 py-6 space-y-2">
+          <div className="bg-white border-t border-gray-100 shadow-lg">
+            <div className="px-4 py-4 space-y-2">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   href={item.path}
-                  className={`block w-full text-left px-6 py-4 rounded-xl transition-all duration-300 font-semibold border ${
+                  onClick={closeMobileMenu}
+                  className={`flex items-center space-x-3 w-full p-3 rounded-lg text-left transition-all duration-200 ${
                     isActive(item.path)
-                      ? "text-brand-blue bg-blue-50 border-blue-200 shadow-sm"
-                      : "text-gray-700 hover:bg-gray-50 hover:text-brand-blue border-transparent hover:border-gray-200"
+                      ? "bg-blue-50 text-blue-700 border border-blue-200"
+                      : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
                   }`}
-
                   data-testid={`mobile-link-${item.label.toLowerCase()}`}
                 >
-                  <div className="flex items-center justify-between">
-                    <span>{item.label}</span>
-                    <ArrowRight className="w-4 h-4 opacity-50" />
-                  </div>
+                  <item.icon className="w-5 h-5" />
+                  <span className="font-medium">{item.label}</span>
                 </Link>
               ))}
               
-              <div className="pt-4 border-t border-gray-200 mt-6">
-                <Link href="/contact">
-                  <Button className="w-full bg-gradient-to-r from-brand-blue to-brand-cyan text-white hover:from-blue-700 hover:to-cyan-700 transition-all font-bold rounded-xl py-4 shadow-lg">
-                    <Zap className="w-5 h-5 mr-2" />
-                    Get Your Quote Now
+              {/* Mobile CTA */}
+              <div className="pt-4 border-t border-gray-100">
+                <Link href="/contact" onClick={closeMobileMenu}>
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium shadow-sm">
+                    <ArrowRight className="w-4 h-4 mr-2" />
+                    Get Your Quote
                   </Button>
                 </Link>
               </div>
@@ -253,7 +170,8 @@ export default function Navigation() {
         </div>
       </nav>
 
-
+      {/* Spacer to prevent content from hiding under fixed navbar */}
+      <div className="h-16"></div>
     </>
   );
 }

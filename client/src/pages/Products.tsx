@@ -1,8 +1,51 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, AlertTriangle, Thermometer, Shield, Palette, Sprout, Bug, Star, Package, Clock, Globe, Leaf, Award, TrendingUp, Heart, Zap } from "lucide-react";
+import { useState } from "react";
 
 export default function Products() {
+  // Gallery images data
+  const galleryImages = [
+    {
+      id: 1,
+      src: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
+      thumb: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      alt: "Product package front view"
+    },
+    {
+      id: 2,
+      src: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
+      thumb: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      alt: "Individual laundry pods"
+    },
+    {
+      id: 3,
+      src: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
+      thumb: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      alt: "Colorful pod chambers"
+    },
+    {
+      id: 4,
+      src: "https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
+      thumb: "https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      alt: "Package back information"
+    },
+    {
+      id: 5,
+      src: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
+      thumb: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      alt: "Usage demonstration"
+    },
+    {
+      id: 6,
+      src: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
+      thumb: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      alt: "Clean laundry results"
+    }
+  ];
+
+  // State for selected image
+  const [selectedImage, setSelectedImage] = useState(galleryImages[0]);
   return (
     <div className="pt-16">
       {/* Product Hero */}
@@ -66,63 +109,33 @@ export default function Products() {
               {/* Main Product Image */}
               <div className="aspect-square bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
-                  alt="5 in 1 Hot sale Soften Clothes Deep Clean Anti-Bacterial Color protection custom fragrance Laundry Detergent Pods for Sensitive Skin" 
-                  className="w-full h-full object-cover"
+                  src={selectedImage.src} 
+                  alt={selectedImage.alt} 
+                  className="w-full h-full object-cover transition-all duration-300"
                   data-testid="img-main-product"
                 />
               </div>
 
               {/* Product Thumbnails */}
               <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-4 xl:grid-cols-6 gap-3">
-                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-                  <img 
-                    src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
-                    alt="Product package front view" 
-                    className="w-full h-full object-cover"
-                    data-testid="img-thumb-1"
-                  />
-                </div>
-                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-                  <img 
-                    src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
-                    alt="Individual laundry pods" 
-                    className="w-full h-full object-cover"
-                    data-testid="img-thumb-2"
-                  />
-                </div>
-                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-                  <img 
-                    src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
-                    alt="Colorful pod chambers" 
-                    className="w-full h-full object-cover"
-                    data-testid="img-thumb-3"
-                  />
-                </div>
-                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-                  <img 
-                    src="https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
-                    alt="Package back information" 
-                    className="w-full h-full object-cover"
-                    data-testid="img-thumb-4"
-                  />
-                </div>
-                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-                  <img 
-                    src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
-                    alt="Usage demonstration" 
-                    className="w-full h-full object-cover"
-                    data-testid="img-thumb-5"
-                  />
-                </div>
-                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
-                  <img 
-                    src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
-                    alt="Clean laundry results" 
-                    className="w-full h-full object-cover"
-                    data-testid="img-thumb-6"
-                  />
-                </div>
+                {galleryImages.map((image) => (
+                  <div 
+                    key={image.id}
+                    onClick={() => setSelectedImage(image)}
+                    className={`aspect-square rounded-lg overflow-hidden cursor-pointer transition-all duration-300 ${
+                      selectedImage.id === image.id 
+                        ? 'ring-3 ring-cyan-500 shadow-lg transform scale-105' 
+                        : 'bg-gray-50 shadow-sm hover:shadow-md hover:scale-102'
+                    }`}
+                  >
+                    <img 
+                      src={image.thumb} 
+                      alt={image.alt} 
+                      className="w-full h-full object-cover"
+                      data-testid={`img-thumb-${image.id}`}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
 

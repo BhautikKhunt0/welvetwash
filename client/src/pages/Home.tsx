@@ -232,46 +232,46 @@ export default function Home() {
       </section>
 
       {/* Trusted by Thousands */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-100 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Trusted by Thousands</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Trusted by Thousands</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Join the growing community of satisfied customers who have revolutionized their laundry routine
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-10 h-10 text-white" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2" data-testid="text-happy-customers">10,000+</div>
-              <p className="text-gray-600 font-medium">Happy Customers</p>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="text-happy-customers">10,000+</div>
+              <p className="text-gray-600 dark:text-gray-300 font-medium">Happy Customers</p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-10 h-10 text-white" />
+            <div className="text-center bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2" data-testid="text-orders-delivered">50,000+</div>
-              <p className="text-gray-600 font-medium">Orders Delivered</p>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="text-orders-delivered">50,000+</div>
+              <p className="text-gray-600 dark:text-gray-300 font-medium">Orders Delivered</p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Star className="w-10 h-10 text-white" />
+            <div className="text-center bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2" data-testid="text-average-rating">4.9/5</div>
-              <p className="text-gray-600 font-medium">Average Rating</p>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="text-average-rating">4.9/5</div>
+              <p className="text-gray-600 dark:text-gray-300 font-medium">Average Rating</p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Award className="w-10 h-10 text-white" />
+            <div className="text-center bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">
+              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl font-bold text-gray-900 mb-2" data-testid="text-industry-awards">15+</div>
-              <p className="text-gray-600 font-medium">Industry Awards</p>
+              <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2" data-testid="text-industry-awards">15+</div>
+              <p className="text-gray-600 dark:text-gray-300 font-medium">Industry Awards</p>
             </div>
           </div>
         </div>

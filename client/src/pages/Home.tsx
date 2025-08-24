@@ -4,7 +4,7 @@ import { Shield, Palette, Sprout, Combine, Bug, ServerCog, Ruler, Weight, Rotate
 
 export default function Home() {
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       {/* Hero Section */}
       <section className="min-h-screen gradient-bg flex items-center relative">
         {/* Background overlay for better navbar visibility */}

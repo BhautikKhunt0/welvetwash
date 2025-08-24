@@ -40,9 +40,9 @@ export default function Home() {
             {/* Light Gradient Overlay for text readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             
-            {/* Text at Bottom Center */}
-            <div className="absolute bottom-12 sm:bottom-16 left-0 right-0 flex justify-center">
-              <div className="text-center text-white max-w-2xl px-4 sm:px-6">
+            {/* Text at Bottom Center - Desktop Only */}
+            <div className="hidden md:block absolute bottom-12 sm:bottom-16 left-0 right-0">
+              <div className="text-center text-white max-w-2xl mx-auto px-4 sm:px-6">
                 <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">
                   5-in-1 Revolutionary Laundry Pods
                 </h1>
@@ -74,17 +74,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Text Under Banner - Mobile Only */}
+      <section className="md:hidden py-6 px-6">
+        <div className="text-center max-w-2xl mx-auto">
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+            5-in-1 Revolutionary Laundry Pods
+          </h1>
+          <p className="text-sm text-gray-600">
+            Experience professional-grade cleaning with 99% efficiency
+          </p>
+        </div>
+      </section>
+
       {/* Action Buttons - Outside Banner */}
-      <section className="py-8">
-        <div className="max-w-4xl mx-auto px-6 lg:px-12">
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+      <section className="py-6 md:py-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-6 justify-center">
             <Link href="/products">
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-10 py-6 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 border-0"
+                className="w-full sm:w-auto bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 sm:px-10 py-4 sm:py-6 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 border-0"
                 data-testid="button-explore-products"
               >
-                <Package className="w-6 h-6 mr-3" />
+                <Package className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                 Explore Products
               </Button>
             </Link>
@@ -92,10 +104,10 @@ export default function Home() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-3 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white px-10 py-6 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105"
+                className="w-full sm:w-auto border-2 sm:border-3 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white px-8 sm:px-10 py-4 sm:py-6 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105"
                 data-testid="button-get-quote-hero"
               >
-                <Zap className="w-6 h-6 mr-3" />
+                <Zap className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                 Get Quote
               </Button>
             </Link>

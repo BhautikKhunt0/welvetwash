@@ -169,9 +169,6 @@ export default function Navigation() {
           </div>
         </div>
       </nav>
-
-      {/* Spacer to prevent content from hiding under fixed navbar */}
-      <div className="h-16"></div>
     </>
   );
 }

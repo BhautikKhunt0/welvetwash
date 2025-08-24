@@ -61,44 +61,6 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Tackle Laundry Woes Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Tackle Your Toughest Laundry Woes with Us!</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Whether it's the lingering stench of sweaty workouts or the pesky marks left by spilled spaghetti, 
-              our state-of-the-art formula gets your clothes looking and smelling their best.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="text-center bg-blue-50 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Banish Bad Odors for Good</h3>
-              <p className="text-gray-600">Our innovative odor-fighting tech dives right to the root of the problem, ensuring your fabrics stay crisp, clean, and stink-free.</p>
-            </div>
-
-            <div className="text-center bg-green-50 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Wipe Out Stubborn Stains Swiftly</h3>
-              <p className="text-gray-600">A unique mix of five expertly formulated enzymes zooms into fabric fibers, zeroing in on and demolishing all kinds of tough stains.</p>
-            </div>
-
-            <div className="text-center bg-emerald-50 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Leaf className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Clean Sustainably</h3>
-              <p className="text-gray-600">Our super-concentrated solutions work their magic with minimal water usage, helping you cut down on waste and shrink your carbon footprint too.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Product Detail with Image Gallery */}
       <section className="py-20 bg-white">

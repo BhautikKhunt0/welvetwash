@@ -17,6 +17,7 @@ export default function Navigation() {
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showProductsDropdown, setShowProductsDropdown] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,10 +30,15 @@ export default function Navigation() {
   }, []);
 
   const navItems = [
-    { path: "/", label: "Home", icon: Home },
-    { path: "/products", label: "Products", icon: Package },
-    { path: "/about", label: "About", icon: Info },
-    { path: "/contact", label: "Contact", icon: MessageCircle },
+    { path: "/", label: "Home", icon: Home, hasDropdown: false },
+    { path: "/products", label: "Products", icon: Package, hasDropdown: true },
+    { path: "/about", label: "About", icon: Info, hasDropdown: false },
+    { path: "/contact", label: "Contact", icon: MessageCircle, hasDropdown: false },
+  ];
+
+  const productDropdownItems = [
+    { path: "/products", label: "Product 1", desc: "5-in-1 Revolutionary Technology" },
+    { path: "/product2", label: "Product 2", desc: "7-in-1 Premium Formula" },
   ];
 
   const isActive = (path: string) => {
@@ -82,19 +88,50 @@ export default function Navigation() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item) => (
-                <Link
+                <div
                   key={item.path}
-                  href={item.path}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    isActive(item.path)
-                      ? "bg-blue-100 text-blue-700 shadow-sm" 
-                      : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
-                  }`}
-                  data-testid={`link-${item.label.toLowerCase()}`}
+                  className="relative"
+                  onMouseEnter={() => item.hasDropdown && setShowProductsDropdown(true)}
+                  onMouseLeave={() => item.hasDropdown && setShowProductsDropdown(false)}
                 >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.label}</span>
-                </Link>
+                  <Link
+                    href={item.path}
+                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      isActive(item.path)
+                        ? "bg-blue-100 text-blue-700 shadow-sm" 
+                        : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                    }`}
+                    data-testid={`link-${item.label.toLowerCase()}`}
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.label}</span>
+                    {item.hasDropdown && (
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        showProductsDropdown ? 'rotate-180' : ''
+                      }`} />
+                    )}
+                  </Link>
+
+                  {/* Dropdown Menu */}
+                  {item.hasDropdown && showProductsDropdown && (
+                    <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                      {productDropdownItems.map((dropItem) => (
+                        <Link
+                          key={dropItem.path}
+                          href={dropItem.path}
+                          className="flex items-start space-x-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                          data-testid={`dropdown-${dropItem.label.toLowerCase().replace(' ', '-')}`}
+                        >
+                          <Package className="w-5 h-5 text-blue-600 mt-0.5" />
+                          <div>
+                            <div className="font-medium text-gray-900">{dropItem.label}</div>
+                            <div className="text-sm text-gray-500">{dropItem.desc}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
 
@@ -140,20 +177,42 @@ export default function Navigation() {
           <div className="bg-white border-t border-gray-100 shadow-lg">
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  href={item.path}
-                  onClick={closeMobileMenu}
-                  className={`flex items-center space-x-3 w-full p-3 rounded-lg text-left transition-all duration-200 ${
-                    isActive(item.path)
-                      ? "bg-blue-50 text-blue-700 border border-blue-200"
-                      : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
-                  }`}
-                  data-testid={`mobile-link-${item.label.toLowerCase()}`}
-                >
-                  <item.icon className="w-5 h-5" />
-                  <span className="font-medium">{item.label}</span>
-                </Link>
+                <div key={item.path}>
+                  <Link
+                    href={item.path}
+                    onClick={closeMobileMenu}
+                    className={`flex items-center space-x-3 w-full p-3 rounded-lg text-left transition-all duration-200 ${
+                      isActive(item.path)
+                        ? "bg-blue-50 text-blue-700 border border-blue-200"
+                        : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
+                    }`}
+                    data-testid={`mobile-link-${item.label.toLowerCase()}`}
+                  >
+                    <item.icon className="w-5 h-5" />
+                    <span className="font-medium">{item.label}</span>
+                  </Link>
+                  
+                  {/* Mobile Product Submenu */}
+                  {item.hasDropdown && (
+                    <div className="ml-6 mt-2 space-y-1">
+                      {productDropdownItems.map((dropItem) => (
+                        <Link
+                          key={dropItem.path}
+                          href={dropItem.path}
+                          onClick={closeMobileMenu}
+                          className="flex items-center space-x-3 w-full p-2 rounded-lg text-left transition-all duration-200 text-gray-500 hover:bg-gray-50 hover:text-blue-600"
+                          data-testid={`mobile-dropdown-${dropItem.label.toLowerCase().replace(' ', '-')}`}
+                        >
+                          <Package className="w-4 h-4" />
+                          <div>
+                            <div className="text-sm font-medium">{dropItem.label}</div>
+                            <div className="text-xs text-gray-400">{dropItem.desc}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               
               {/* Mobile CTA */}

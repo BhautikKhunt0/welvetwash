@@ -294,6 +294,19 @@ export default function Products() {
             </table>
           </div>
 
+          {/* Product Visual */}
+          <div className="text-center mt-12 mb-16">
+            <img 
+              src="@assets/image_1756027620913.png" 
+              alt="5-in-1 Multi-colored Laundry Pod with Blue, Green, and Pink Chambers" 
+              className="mx-auto rounded-2xl shadow-xl max-w-md w-full h-auto bg-white p-8"
+              data-testid="img-product-visual"
+            />
+            <p className="text-lg text-gray-600 mt-6 font-medium">
+              Revolutionary 5-in-1 Formula: Multi-Chamber Technology
+            </p>
+          </div>
+
           {/* Key Stats */}
           <div className="grid md:grid-cols-4 gap-8 mt-16">
             <div className="text-center bg-white p-8 rounded-2xl shadow-lg">

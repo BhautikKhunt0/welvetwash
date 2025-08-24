@@ -1,100 +1,85 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Shield, Palette, Sprout, Combine, Bug, ServerCog, Ruler, Weight, RotateCcw, Star, Users, Award, CheckCircle, Clock, Zap, Globe, Leaf, TrendingUp, Heart, Package } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  const heroImages = [
+    "https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900",
+    "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900",
+    "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900",
+    "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="mx-auto px-6 lg:px-12 py-8">
           <div className="relative w-full h-[70vh] min-h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-            {/* Hero Banner Image */}
+            {/* Hero Banner Image Slideshow */}
             <img 
-              src="https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900" 
+              src={heroImages[currentImageIndex]} 
               alt="CleanPods Pro - Revolutionary Laundry Experience" 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-opacity duration-1000"
               data-testid="img-hero-banner"
             />
             
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            {/* Light Gradient Overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             
-            {/* Content Overlay */}
-            <div className="absolute inset-0 flex items-center">
-              <div className="max-w-3xl ml-8 lg:ml-16 text-white space-y-8">
-                
-                {/* Premium Badge */}
-                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/50 backdrop-blur-md">
-                  <Star className="w-5 h-5 text-yellow-400 mr-3" />
-                  <span className="text-sm font-semibold text-cyan-100 tracking-wide">PREMIUM FORMULA TECHNOLOGY</span>
-                </div>
-                
-                {/* Main Heading */}
-                <div className="space-y-4">
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
-                    <span className="text-white">5-in-1</span>{" "}
-                    <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                      Revolutionary
-                    </span>
-                  </h1>
-                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white">
-                    Laundry Pods
-                  </h2>
-                </div>
-                
-                {/* Subtitle */}
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-200 font-medium leading-relaxed max-w-2xl">
-                  Experience professional-grade cleaning with our compartmentalized laundry pods. 
-                  <span className="text-cyan-300 font-semibold"> 99% cleaning efficiency</span> with lasting fragrance.
+            {/* Text at Bottom Center */}
+            <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+              <div className="text-center text-white max-w-2xl px-6">
+                <h1 className="text-2xl md:text-3xl font-bold mb-2">
+                  5-in-1 Revolutionary Laundry Pods
+                </h1>
+                <p className="text-sm md:text-base text-gray-200">
+                  Experience professional-grade cleaning with 99% efficiency
                 </p>
-                
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-6 pt-4">
-                  <Link href="/products">
-                    <Button 
-                      size="lg"
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-10 py-6 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 border-0"
-                      data-testid="button-explore-products"
-                    >
-                      <Package className="w-6 h-6 mr-3" />
-                      Explore Products
-                    </Button>
-                  </Link>
-                  <Link href="/contact">
-                    <Button 
-                      size="lg"
-                      variant="outline"
-                      className="border-3 border-white text-white hover:bg-white hover:text-slate-900 px-10 py-6 rounded-2xl font-bold text-lg backdrop-blur-md bg-white/10 transition-all duration-300 hover:scale-105"
-                      data-testid="button-get-quote-hero"
-                    >
-                      <Zap className="w-6 h-6 mr-3" />
-                      Get Quote
-                    </Button>
-                  </Link>
-                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Performance Indicators */}
-            <div className="absolute bottom-8 right-8 flex space-x-4">
-              <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30">
-                <div className="text-3xl font-bold text-white text-center">99%</div>
-                <div className="text-white/80 text-sm font-medium text-center">Efficiency</div>
-              </div>
-              <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30">
-                <div className="text-3xl font-bold text-cyan-300 text-center">5-in-1</div>
-                <div className="text-white/80 text-sm font-medium text-center">Formula</div>
-              </div>
-            </div>
-            
-            {/* Quality Badge */}
-            <div className="absolute top-8 right-8 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-6 py-3 rounded-full shadow-xl">
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5" />
-                <span className="font-bold text-sm">PREMIUM QUALITY</span>
-              </div>
-            </div>
+      {/* Action Buttons - Outside Banner */}
+      <section className="py-8">
+        <div className="max-w-4xl mx-auto px-6 lg:px-12">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Link href="/products">
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-10 py-6 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 border-0"
+                data-testid="button-explore-products"
+              >
+                <Package className="w-6 h-6 mr-3" />
+                Explore Products
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-3 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white px-10 py-6 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105"
+                data-testid="button-get-quote-hero"
+              >
+                <Zap className="w-6 h-6 mr-3" />
+                Get Quote
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

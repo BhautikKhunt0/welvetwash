@@ -233,73 +233,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join thousands of satisfied customers who have transformed their laundry experience
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-slate-50 p-8 rounded-2xl" data-testid="testimonial-1">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-                <span className="ml-2 text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-4">
-                "These pods have completely changed my laundry routine. The cleaning power is incredible and my clothes smell amazing for weeks!"
-              </p>
-              <div className="flex items-center">
-                <Users className="w-6 h-6 text-blue-500 mr-2" />
-                <span className="font-semibold text-gray-900">Sarah Johnson</span>
-              </div>
-            </div>
-
-            <div className="bg-slate-50 p-8 rounded-2xl" data-testid="testimonial-2">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-                <span className="ml-2 text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-4">
-                "As a busy mom of three, these pods save me so much time. One pod does the work of multiple products!"
-              </p>
-              <div className="flex items-center">
-                <Users className="w-6 h-6 text-blue-500 mr-2" />
-                <span className="font-semibold text-gray-900">Maria Rodriguez</span>
-              </div>
-            </div>
-
-            <div className="bg-slate-50 p-8 rounded-2xl" data-testid="testimonial-3">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-                <span className="ml-2 text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-4">
-                "Professional quality results at home. My work clothes have never looked better. Highly recommend!"
-              </p>
-              <div className="flex items-center">
-                <Users className="w-6 h-6 text-blue-500 mr-2" />
-                <span className="font-semibold text-gray-900">David Chen</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Awards Section */}
       <section className="py-20 bg-slate-100">
@@ -347,117 +280,107 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trusted by Thousands Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Trusted by Thousands</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join the growing community of satisfied customers who have revolutionized their laundry routine
+      {/* Trusted by Thousands - Redesigned */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-cyan-900/20 relative overflow-hidden">
+        {/* Background Decorative Elements */}
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-400/20 to-teal-400/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Header Section */}
+          <div className="text-center mb-20">
+            <div className="inline-block mb-4">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent text-sm font-semibold tracking-wider uppercase">
+                Our Impact
+              </span>
+            </div>
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-cyan-700 bg-clip-text text-transparent mb-6">
+              Trusted by Thousands
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Join the global community of satisfied customers who have revolutionized their laundry experience with our innovative solutions
             </p>
           </div>
 
           {/* Statistics Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {/* Happy Customers */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-center transform group-hover:scale-105 transition-all duration-300 shadow-xl">
+                <div className="mb-6">
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Users className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-3" data-testid="text-happy-customers">
+                  10,000+
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 font-medium text-lg">Happy Customers</p>
+                <div className="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2" data-testid="text-happy-customers">10,000+</div>
-              <div className="text-gray-600">Happy Customers</div>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
+            {/* Orders Delivered */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-center transform group-hover:scale-105 transition-all duration-300 shadow-xl">
+                <div className="mb-6">
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <TrendingUp className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-3" data-testid="text-orders-delivered">
+                  50,000+
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 font-medium text-lg">Orders Delivered</p>
+                <div className="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"></div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2" data-testid="text-orders-delivered">50,000+</div>
-              <div className="text-gray-600">Orders Delivered</div>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-white" />
+            {/* Average Rating */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-orange-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-center transform group-hover:scale-105 transition-all duration-300 shadow-xl">
+                <div className="mb-6">
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Star className="w-10 h-10 text-white fill-current" />
+                  </div>
+                </div>
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mb-3" data-testid="text-average-rating">
+                  4.9/5
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 font-medium text-lg">Average Rating</p>
+                <div className="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-amber-500 to-orange-500 rounded-full"></div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2" data-testid="text-average-rating">4.9/5</div>
-              <div className="text-gray-600">Average Rating</div>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-white" />
+            {/* Industry Awards */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
+              <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-center transform group-hover:scale-105 transition-all duration-300 shadow-xl">
+                <div className="mb-6">
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Award className="w-10 h-10 text-white" />
+                  </div>
+                </div>
+                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-3" data-testid="text-industry-awards">
+                  15+
+                </div>
+                <p className="text-gray-600 dark:text-gray-300 font-medium text-lg">Industry Awards</p>
+                <div className="mt-4 h-1 w-16 mx-auto bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
               </div>
-              <div className="text-3xl font-bold text-gray-900 mb-2" data-testid="text-industry-awards">15+</div>
-              <div className="text-gray-600">Industry Awards</div>
             </div>
           </div>
 
-          {/* Enhanced Testimonials */}
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-lg" data-testid="enhanced-testimonial-1">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-700 mb-6 italic">
-                "CleanPods Pro has completely transformed my laundry routine! The 5-in-1 technology is incredible - my clothes come out cleaner, smell amazing, and colors stay vibrant wash after wash."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">SM</span>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Sarah M.</div>
-                  <div className="text-sm text-gray-500">Home Owner</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg" data-testid="enhanced-testimonial-2">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-700 mb-6 italic">
-                "As a laundromat owner, I needed something reliable and effective. CleanPods Pro delivers consistent results for my machines. My customers love the long-lasting fragrance!"
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">JR</span>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">James R.</div>
-                  <div className="text-sm text-gray-500">Business Owner</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-lg" data-testid="enhanced-testimonial-3">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-700 mb-6 italic">
-                "I was skeptical about trying new laundry products, but CleanPods Pro exceeded all expectations. The convenience, effectiveness, and eco-friendly formula make it a perfect choice for my family."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">ML</span>
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Maria L.</div>
-                  <div className="text-sm text-gray-500">Mother of 3</div>
-                </div>
-              </div>
+          {/* Bottom CTA */}
+          <div className="text-center">
+            <div className="inline-flex items-center px-6 py-3 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm border border-white/30 rounded-full">
+              <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+              <span className="text-gray-700 dark:text-gray-300 font-medium">Trusted worldwide since 2020</span>
             </div>
           </div>
         </div>

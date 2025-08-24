@@ -7,10 +7,10 @@ export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const heroImages = [
-    "https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900",
-    "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900",
-    "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900",
-    "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900"
+    "https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+    "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+    "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600", 
+    "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600"
   ];
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="mx-auto px-6 lg:px-12 py-8">
-          <div className="relative w-full h-[70vh] min-h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] min-h-[280px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[500px] rounded-3xl overflow-hidden shadow-2xl">
             {/* Hero Banner Image Slideshow */}
             <img 
               src={heroImages[currentImageIndex]} 
@@ -41,19 +41,19 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             
             {/* Text at Bottom Center */}
-            <div className="absolute bottom-16 left-0 right-0 flex justify-center">
-              <div className="text-center text-white max-w-2xl px-6">
-                <h1 className="text-2xl md:text-3xl font-bold mb-2">
+            <div className="absolute bottom-12 sm:bottom-16 left-0 right-0 flex justify-center">
+              <div className="text-center text-white max-w-2xl px-4 sm:px-6">
+                <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">
                   5-in-1 Revolutionary Laundry Pods
                 </h1>
-                <p className="text-sm md:text-base text-gray-200">
+                <p className="text-xs sm:text-sm md:text-base text-gray-200">
                   Experience professional-grade cleaning with 99% efficiency
                 </p>
               </div>
             </div>
 
             {/* Navigation Dots */}
-            <div className="absolute bottom-6 left-0 right-0 flex justify-center">
+            <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 flex justify-center">
               <div className="flex space-x-3">
                 {heroImages.map((_, index) => (
                   <button

@@ -281,7 +281,7 @@ export default function Home() {
       </section>
 
       {/* Trusted by Thousands */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16" style={{backgroundColor: '#f7f7f7'}}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
@@ -332,7 +332,7 @@ export default function Home() {
 
           {/* Customer Testimonials */}
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-testid="testimonial-card-1">
+            <div className="p-6 rounded-lg" style={{backgroundColor: '#e3f2fd'}} data-testid="testimonial-card-1">
               <div className="flex text-yellow-400 mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
@@ -352,7 +352,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-testid="testimonial-card-2">
+            <div className="p-6 rounded-lg" style={{backgroundColor: '#e8f5e8'}} data-testid="testimonial-card-2">
               <div className="flex text-yellow-400 mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />
@@ -372,7 +372,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100" data-testid="testimonial-card-3">
+            <div className="p-6 rounded-lg" style={{backgroundColor: '#f3e5f5'}} data-testid="testimonial-card-3">
               <div className="flex text-yellow-400 mb-3">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-current" />

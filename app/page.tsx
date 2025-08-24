@@ -593,7 +593,7 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-blue-200">
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-16 text-sm text-blue-200">
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4" />
               <span>24-hour response time</span>

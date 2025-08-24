@@ -11,22 +11,22 @@ Preferred communication style: Simple, everyday language.
 ## System Architecture
 
 ### Frontend Architecture
-- **Framework**: React 18 with TypeScript and Vite for build tooling
+- **Framework**: Next.js 15 with React 18 and TypeScript for full-stack development
 - **Styling**: Tailwind CSS with shadcn/ui component library for consistent design system
-- **Routing**: Wouter for lightweight client-side routing
-- **State Management**: TanStack Query (React Query) for server state management
+- **Routing**: Next.js App Router for modern routing and server components
+- **State Management**: Client-side state management with React hooks for form handling
 - **Form Handling**: React Hook Form with Zod validation for type-safe form processing
 - **Component System**: Radix UI primitives with custom styling for accessibility and design consistency
-- **Navigation**: Advanced sticky navbar with scroll-based behavior, smooth transitions, and mobile-responsive design
+- **Navigation**: Advanced sticky navbar with Next.js Link components, smooth transitions, and mobile-responsive design
 - **Animations**: CSS animations, hover effects, floating elements, and smooth scroll behavior
-- **Footer**: Comprehensive footer with social links, newsletter signup, contact information, and quick navigation
+- **Footer**: Comprehensive footer with contact information and quick navigation
 
 ### Backend Architecture  
-- **Server**: Express.js with TypeScript for API endpoints
-- **Development**: Custom Vite integration for hot module replacement in development
-- **Storage**: In-memory storage implementation with interface for future database integration
-- **Validation**: Zod schemas shared between frontend and backend for consistent data validation
-- **API Design**: RESTful endpoints for quote request submission and retrieval
+- **Framework**: Next.js API routes for serverless backend functionality
+- **Development**: Next.js development server with hot module replacement
+- **Storage**: Contact form handling with client-side state management
+- **Validation**: Zod schemas for form validation and type safety
+- **API Design**: Next.js API routes for future backend functionality
 
 ### Data Storage Solutions
 - **Current**: In-memory storage using Map data structures for development and demonstration

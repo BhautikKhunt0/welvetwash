@@ -281,7 +281,7 @@ export default function Home() {
       </section>
 
       {/* Trusted by Thousands */}
-      <section className="py-16" style={{backgroundColor: '#f7f7f7'}}>
+      <section className="py-16 bg-gray-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">

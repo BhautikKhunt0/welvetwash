@@ -1,6 +1,7 @@
-import { Link } from "wouter";
+"use client";
+
+import Link from "next/link";
 import { Sparkles, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Leaf, ArrowUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -171,15 +172,13 @@ export default function Footer() {
                 <Leaf className="w-4 h-4 text-green-400" />
                 <span>Eco-Friendly Formula</span>
               </div>
-              <Button
+              <button
                 onClick={scrollToTop}
-                variant="ghost"
-                size="sm"
-                className="text-gray-400 hover:text-white hover:bg-white/10 rounded-full p-2"
+                className="text-gray-400 hover:text-white hover:bg-white/10 rounded-full p-2 transition-colors duration-300"
                 data-testid="button-scroll-to-top"
               >
                 <ArrowUp className="w-4 h-4" />
-              </Button>
+              </button>
             </div>
           </div>
         </div>

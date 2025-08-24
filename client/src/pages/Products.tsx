@@ -386,67 +386,6 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Sustainable Pledge */}
-      <section className="py-20 bg-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Pledge: Sustainable by Design</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Using natural fragrances and biodegradable film, we safeguard the planet from production to use. 
-              Our commitment to sustainability ensures a better future for generations to come.
-            </p>
-            <div className="flex justify-center items-center space-x-8">
-              <div className="text-center">
-                <Leaf className="w-12 h-12 text-green-600 mx-auto mb-2" />
-                <span className="text-sm font-medium text-gray-700">Natural Fragrances</span>
-              </div>
-              <div className="text-center">
-                <Globe className="w-12 h-12 text-blue-600 mx-auto mb-2" />
-                <span className="text-sm font-medium text-gray-700">Biodegradable Film</span>
-              </div>
-              <div className="text-center">
-                <Heart className="w-12 h-12 text-red-600 mx-auto mb-2" />
-                <span className="text-sm font-medium text-gray-700">Planet Protection</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Gallery */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Product Gallery</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <img 
-              src="https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-              alt="Modern laundry room interior" 
-              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              data-testid="gallery-img-1"
-            />
-            <img 
-              src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-              alt="Colorful laundry detergent pods" 
-              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              data-testid="gallery-img-2"
-            />
-            <img 
-              src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-              alt="Neatly folded clean clothes" 
-              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              data-testid="gallery-img-3"
-            />
-            <img 
-              src="https://images.unsplash.com/photo-1563453392212-326f5e854473?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" 
-              alt="Professional laundry care setup" 
-              className="rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              data-testid="gallery-img-4"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

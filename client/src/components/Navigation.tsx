@@ -18,6 +18,7 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,6 +50,21 @@ export default function Navigation() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const handleMouseEnter = () => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    setShowProductsDropdown(true);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setShowProductsDropdown(false);
+    }, 300); // 300ms delay before closing
+    setDropdownTimeout(timeout);
   };
 
   return (
@@ -91,8 +107,8 @@ export default function Navigation() {
                 <div
                   key={item.path}
                   className="relative"
-                  onMouseEnter={() => item.hasDropdown && setShowProductsDropdown(true)}
-                  onMouseLeave={() => item.hasDropdown && setShowProductsDropdown(false)}
+                  onMouseEnter={() => item.hasDropdown && handleMouseEnter()}
+                  onMouseLeave={() => item.hasDropdown && handleMouseLeave()}
                 >
                   <Link
                     href={item.path}
@@ -114,7 +130,11 @@ export default function Navigation() {
 
                   {/* Dropdown Menu */}
                   {item.hasDropdown && showProductsDropdown && (
-                    <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    <div 
+                      className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    >
                       {productDropdownItems.map((dropItem) => (
                         <Link
                           key={dropItem.path}

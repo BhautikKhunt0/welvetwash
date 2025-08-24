@@ -57,47 +57,134 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Product Detail Features */}
-      <section className="py-20 bg-slate-100">
+      {/* Product Detail with Image Gallery */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Small Body, Great Soul</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Advanced microcapsule technology combined with premium Swiss fragrances for the ultimate laundry experience
-            </p>
-          </div>
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Product Image Gallery */}
+            <div className="space-y-6">
+              {/* Main Product Image */}
+              <div className="aspect-square bg-gray-50 rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
+                  alt="5 in 1 Hot sale Soften Clothes Deep Clean Anti-Bacterial Color protection custom fragrance Laundry Detergent Pods for Sensitive Skin" 
+                  className="w-full h-full object-cover"
+                  data-testid="img-main-product"
+                />
+              </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Product Image */}
-            <div className="text-center">
-              <img 
-                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                alt="5-in-1 Laundry Pod with multi-colored chambers" 
-                className="rounded-2xl shadow-lg w-full max-w-md mx-auto"
-                data-testid="img-product-pod"
-              />
+              {/* Product Thumbnails */}
+              <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-4 xl:grid-cols-6 gap-3">
+                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+                  <img 
+                    src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+                    alt="Product package front view" 
+                    className="w-full h-full object-cover"
+                    data-testid="img-thumb-1"
+                  />
+                </div>
+                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+                  <img 
+                    src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+                    alt="Individual laundry pods" 
+                    className="w-full h-full object-cover"
+                    data-testid="img-thumb-2"
+                  />
+                </div>
+                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+                  <img 
+                    src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+                    alt="Colorful pod chambers" 
+                    className="w-full h-full object-cover"
+                    data-testid="img-thumb-3"
+                  />
+                </div>
+                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+                  <img 
+                    src="https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+                    alt="Package back information" 
+                    className="w-full h-full object-cover"
+                    data-testid="img-thumb-4"
+                  />
+                </div>
+                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+                  <img 
+                    src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+                    alt="Usage demonstration" 
+                    className="w-full h-full object-cover"
+                    data-testid="img-thumb-5"
+                  />
+                </div>
+                <div className="aspect-square bg-gray-50 rounded-lg overflow-hidden shadow-sm cursor-pointer hover:shadow-md transition-shadow">
+                  <img 
+                    src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
+                    alt="Clean laundry results" 
+                    className="w-full h-full object-cover"
+                    data-testid="img-thumb-6"
+                  />
+                </div>
+              </div>
             </div>
 
-            {/* Features */}
+            {/* Product Information */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Friction-Activated Fragrance: Microcapsule Magic</h3>
-                <p className="text-gray-600 text-lg">Our microcapsule technology allows the fragrance to penetrate the fabric while wearing or moving, releasing a lasting, pleasant fragrance.</p>
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                  5 in 1 Hot sale Soften Clothes Deep Clean Anti-Bacterial Color protection custom fragrance Laundry Detergent Pods for Sensitive Skin
+                </h2>
+                <p className="text-xl text-teal-600 font-semibold mb-8">North Island</p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">70%-80% High-Concentration: Laundry's Powerhouse</h3>
-                <p className="text-gray-600 text-lg">Rich in active ingredients, it ensures that clothes are spotless and is a reliable choice for cleaning clothes.</p>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">Product Detail</h3>
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">1. Friction-Activated Fragrance: Microcapsule Magic</h4>
+                    <p className="text-gray-600">Our microcapsule tech lets fragrance seep into the fabric during wear or exercise, releasing a continuous, pleasant scent.</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">2. 70%-80% High-Concentration: Laundry's Powerhouse</h4>
+                    <p className="text-gray-600">Loaded with active ingredients, it ensures clothes come out spotless, a reliable choice for clean laundry.</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">3. Banish Bacteria and Mites: Hidden Threats No More</h4>
+                    <p className="text-gray-600">Our product combats unseen bacteria and mites, promising a hygienic, comfortable clothing experience.</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">4. Renowned Brand Givaudan Scents: Long-Lasting Elegance</h4>
+                    <p className="text-gray-600">Featuring high-end fragrances, clothes carry a sophisticated, lingering aroma.</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">5. Pledge: Sustainable by Design</h4>
+                    <p className="text-gray-600">Using natural fragrances and biodegradable film, we safeguard the planet from production.</p>
+                  </div>
+                </div>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Banish Bacteria and Mites: Hidden Threats No More</h3>
-                <p className="text-gray-600 text-lg">Our products fight invisible bacteria and mites, ensuring a hygienic and comfortable dressing experience.</p>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Renowned Brand Givaudan Scents: Long-Lasting Elegance</h3>
-                <p className="text-gray-600 text-lg">With high-end fragrances, clothes exude a sophisticated and long-lasting fragrance.</p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact">
+                  <Button 
+                    size="lg"
+                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105"
+                    data-testid="button-get-quote-main"
+                  >
+                    <Package className="w-6 h-6 mr-3" />
+                    Get Quote Now
+                  </Button>
+                </Link>
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="flex-1 border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
+                  data-testid="button-add-inquiry"
+                >
+                  <Heart className="w-6 h-6 mr-3" />
+                  Add to Inquiry
+                </Button>
               </div>
             </div>
           </div>

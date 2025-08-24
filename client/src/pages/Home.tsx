@@ -27,8 +27,7 @@ export default function Home() {
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="mx-auto px-6 lg:px-12 py-8">
-          <div className="relative w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] min-h-[280px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+        <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] overflow-hidden">
             {/* Hero Banner Image Slideshow */}
             <img 
               src={heroImages[currentImageIndex]} 
@@ -71,7 +70,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       {/* Text Under Banner - Mobile Only */}

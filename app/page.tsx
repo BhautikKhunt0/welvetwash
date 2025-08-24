@@ -347,61 +347,116 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Environmental Impact */}
-      <section className="py-20 bg-white">
+      {/* Trusted by Thousands Section */}
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Environmental Responsibility</h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Our commitment to sustainability drives every aspect of our product development. 
-                CleanPods Pro delivers powerful cleaning while minimizing environmental impact.
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Trusted by Thousands</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join the growing community of satisfied customers who have revolutionized their laundry routine
+            </p>
+          </div>
+
+          {/* Statistics Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-gray-900 mb-2" data-testid="text-happy-customers">10,000+</div>
+              <div className="text-gray-600">Happy Customers</div>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-gray-900 mb-2" data-testid="text-orders-delivered">50,000+</div>
+              <div className="text-gray-600">Orders Delivered</div>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-gray-900 mb-2" data-testid="text-average-rating">4.9/5</div>
+              <div className="text-gray-600">Average Rating</div>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-gray-900 mb-2" data-testid="text-industry-awards">15+</div>
+              <div className="text-gray-600">Industry Awards</div>
+            </div>
+          </div>
+
+          {/* Enhanced Testimonials */}
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg" data-testid="enhanced-testimonial-1">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-6 italic">
+                "CleanPods Pro has completely transformed my laundry routine! The 5-in-1 technology is incredible - my clothes come out cleaner, smell amazing, and colors stay vibrant wash after wash."
               </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Leaf className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Biodegradable Formula</h3>
-                    <p className="text-gray-600">All ingredients break down naturally without harming waterways or marine life.</p>
-                  </div>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold">SM</span>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Globe className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Reduced Carbon Footprint</h3>
-                    <p className="text-gray-600">Concentrated formula means less packaging and transportation emissions.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Heart className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Safe for Families</h3>
-                    <p className="text-gray-600">Non-toxic, hypoallergenic formula safe for sensitive skin and children.</p>
-                  </div>
+                <div>
+                  <div className="font-semibold text-gray-900">Sarah M.</div>
+                  <div className="text-sm text-gray-500">Home Owner</div>
                 </div>
               </div>
             </div>
 
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-                alt="Beautiful natural environment" 
-                className="rounded-2xl shadow-lg"
-                data-testid="img-environment"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-3xl font-bold text-green-600 mb-1" data-testid="text-co2-reduction">-75%</div>
-                <div className="text-gray-700 text-sm font-medium">CO₂ Reduction</div>
-                <div className="text-xs text-gray-500">vs. traditional detergents</div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg" data-testid="enhanced-testimonial-2">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-6 italic">
+                "As a laundromat owner, I needed something reliable and effective. CleanPods Pro delivers consistent results for my machines. My customers love the long-lasting fragrance!"
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold">JR</span>
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">James R.</div>
+                  <div className="text-sm text-gray-500">Business Owner</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg" data-testid="enhanced-testimonial-3">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-current" />
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-700 mb-6 italic">
+                "I was skeptical about trying new laundry products, but CleanPods Pro exceeded all expectations. The convenience, effectiveness, and eco-friendly formula make it a perfect choice for my family."
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold">ML</span>
+                </div>
+                <div>
+                  <div className="font-semibold text-gray-900">Maria L.</div>
+                  <div className="text-sm text-gray-500">Mother of 3</div>
+                </div>
               </div>
             </div>
           </div>
@@ -418,20 +473,21 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <Link href="/contact">
-              <Button className="bg-white text-brand-blue hover:bg-gray-100 transition-all transform hover:scale-105 px-10 py-4 rounded-full font-bold text-lg shadow-xl">
+              <Button className="w-full sm:w-auto bg-white text-cyan-600 hover:bg-gray-100 transition-all transform hover:scale-105 px-10 py-4 rounded-full font-bold text-lg shadow-xl" data-testid="button-get-quote-cta">
                 Get Your Quote Now
               </Button>
             </Link>
             <Link href="/products">
               <Button 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-brand-blue transition-all px-10 py-4 rounded-full font-bold text-lg"
+                className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-cyan-600 transition-all transform hover:scale-105 px-10 py-4 rounded-full font-bold text-lg shadow-lg"
+                data-testid="button-view-products-cta"
               >
                 View Product Details
               </Button>
             </Link>
           </div>
-          <div className="flex items-center justify-center space-x-8 text-sm text-blue-200">
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-blue-200">
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4" />
               <span>24-hour response time</span>

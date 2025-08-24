@@ -1,244 +1,100 @@
-import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Shield, Palette, Sprout, Combine, Bug, ServerCog, Ruler, Weight, RotateCcw, Star, Users, Award, CheckCircle, Clock, Zap, Globe, Leaf, TrendingUp, Heart, ChevronLeft, ChevronRight, Play, Pause, Package, ChevronDown } from "lucide-react";
+import { Shield, Palette, Sprout, Combine, Bug, ServerCog, Ruler, Weight, RotateCcw, Star, Users, Award, CheckCircle, Clock, Zap, Globe, Leaf, TrendingUp, Heart, Package } from "lucide-react";
 
 export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  const slides = [
-    {
-      id: 1,
-      image: "https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      title: "Modern Laundry Solutions",
-      subtitle: "Professional cleaning technology"
-    },
-    {
-      id: 2,
-      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      title: "Premium Clean Results",
-      subtitle: "99% cleaning efficiency guaranteed"
-    },
-    {
-      id: 3,
-      image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      title: "Fresh & Long-lasting",
-      subtitle: "Fragrance that lasts for weeks"
-    }
-  ];
-
-  // Auto-advance slides
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [isAutoPlaying, slides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-slate-900/20 backdrop-blur-3xl"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-cyan-600/10"></div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-20">
+      <section className="relative overflow-hidden">
+        <div className="mx-auto px-6 lg:px-12 py-8">
+          <div className="relative w-full h-[70vh] min-h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+            {/* Hero Banner Image */}
+            <img 
+              src="https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900" 
+              alt="CleanPods Pro - Revolutionary Laundry Experience" 
+              className="w-full h-full object-cover"
+              data-testid="img-hero-banner"
+            />
             
-            {/* Left Content */}
-            <div className="text-white space-y-8">
-              <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 rounded-full border border-blue-400/30 backdrop-blur-sm">
-                  <Star className="w-4 h-4 text-yellow-400 mr-2" />
-                  <span className="text-sm font-medium text-blue-100">Industry Leading Technology</span>
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
+            
+            {/* Content Overlay */}
+            <div className="absolute inset-0 flex items-center">
+              <div className="max-w-3xl ml-8 lg:ml-16 text-white space-y-8">
+                
+                {/* Premium Badge */}
+                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/50 backdrop-blur-md">
+                  <Star className="w-5 h-5 text-yellow-400 mr-3" />
+                  <span className="text-sm font-semibold text-cyan-100 tracking-wide">PREMIUM FORMULA TECHNOLOGY</span>
                 </div>
                 
-                <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                  5-in-1{" "}
-                  <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Revolutionary
-                  </span>{" "}
-                  Laundry Pods
-                </h1>
+                {/* Main Heading */}
+                <div className="space-y-4">
+                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight">
+                    <span className="text-white">5-in-1</span>{" "}
+                    <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                      Revolutionary
+                    </span>
+                  </h1>
+                  <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white">
+                    Laundry Pods
+                  </h2>
+                </div>
                 
-                <p className="text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-2xl">
-                  Experience unmatched cleaning power with our compartmentalized laundry pods. 
-                  Advanced formulation delivers 99% cleaning efficiency with long-lasting fragrance.
+                {/* Subtitle */}
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-200 font-medium leading-relaxed max-w-2xl">
+                  Experience professional-grade cleaning with our compartmentalized laundry pods. 
+                  <span className="text-cyan-300 font-semibold"> 99% cleaning efficiency</span> with lasting fragrance.
                 </p>
+                
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row gap-6 pt-4">
+                  <Link href="/products">
+                    <Button 
+                      size="lg"
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-10 py-6 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 border-0"
+                      data-testid="button-explore-products"
+                    >
+                      <Package className="w-6 h-6 mr-3" />
+                      Explore Products
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button 
+                      size="lg"
+                      variant="outline"
+                      className="border-3 border-white text-white hover:bg-white hover:text-slate-900 px-10 py-6 rounded-2xl font-bold text-lg backdrop-blur-md bg-white/10 transition-all duration-300 hover:scale-105"
+                      data-testid="button-get-quote-hero"
+                    >
+                      <Zap className="w-6 h-6 mr-3" />
+                      Get Quote
+                    </Button>
+                  </Link>
+                </div>
               </div>
+            </div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/products">
-                  <Button 
-                    size="lg"
-                    className="bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-xl font-bold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105"
-                    data-testid="button-explore-products"
-                  >
-                    <Package className="w-5 h-5 mr-2" />
-                    Explore Products
-                  </Button>
-                </Link>
-                <Link href="/contact">
-                  <Button 
-                    size="lg"
-                    variant="outline"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105"
-                    data-testid="button-get-quote-hero"
-                  >
-                    <Zap className="w-5 h-5 mr-2" />
-                    Get Quote
-                  </Button>
-                </Link>
+            {/* Performance Indicators */}
+            <div className="absolute bottom-8 right-8 flex space-x-4">
+              <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30">
+                <div className="text-3xl font-bold text-white text-center">99%</div>
+                <div className="text-white/80 text-sm font-medium text-center">Efficiency</div>
               </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 pt-8">
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-cyan-400 mb-2" data-testid="text-cleaning-efficiency">99%</div>
-                  <div className="text-slate-400 font-medium">Cleaning Efficiency</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-purple-400 mb-2" data-testid="text-comprehensive-care">5-in-1</div>
-                  <div className="text-slate-400 font-medium">Formula Technology</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-green-400 mb-2" data-testid="text-power-load">15G</div>
-                  <div className="text-slate-400 font-medium">Power Load</div>
-                </div>
+              <div className="bg-white/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/30">
+                <div className="text-3xl font-bold text-cyan-300 text-center">5-in-1</div>
+                <div className="text-white/80 text-sm font-medium text-center">Formula</div>
               </div>
             </div>
             
-            {/* Right Content - Image Slideshow */}
-            <div className="relative">
-              <div className="relative w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl bg-white/10 backdrop-blur-sm border border-white/20">
-                
-                {/* Slides */}
-                <div className="relative w-full h-full">
-                  {slides.map((slide, index) => (
-                    <div
-                      key={slide.id}
-                      className={`absolute inset-0 transition-opacity duration-1000 ${
-                        index === currentSlide ? 'opacity-100' : 'opacity-0'
-                      }`}
-                    >
-                      <img 
-                        src={slide.image}
-                        alt={slide.title}
-                        className="w-full h-full object-cover"
-                        data-testid={`img-hero-slide-${index + 1}`}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                      
-                      {/* Slide Info */}
-                      <div className="absolute bottom-8 left-8 text-white">
-                        <h3 className="text-2xl font-bold mb-2">{slide.title}</h3>
-                        <p className="text-lg text-white/80">{slide.subtitle}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Navigation Controls */}
-                <div className="absolute top-1/2 -translate-y-1/2 left-4">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={prevSlide}
-                    className="w-12 h-12 rounded-full bg-black/20 hover:bg-black/40 text-white border border-white/30 backdrop-blur-sm transition-all"
-                    data-testid="button-prev-slide"
-                  >
-                    <ChevronLeft className="w-6 h-6" />
-                  </Button>
-                </div>
-                
-                <div className="absolute top-1/2 -translate-y-1/2 right-4">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={nextSlide}
-                    className="w-12 h-12 rounded-full bg-black/20 hover:bg-black/40 text-white border border-white/30 backdrop-blur-sm transition-all"
-                    data-testid="button-next-slide"
-                  >
-                    <ChevronRight className="w-6 h-6" />
-                  </Button>
-                </div>
-
-                {/* Slide Indicators */}
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3">
-                  {slides.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => goToSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === currentSlide 
-                          ? 'bg-white scale-125' 
-                          : 'bg-white/50 hover:bg-white/70'
-                      }`}
-                      data-testid={`indicator-slide-${index + 1}`}
-                    />
-                  ))}
-                </div>
-
-                {/* Auto-play Control */}
-                <div className="absolute top-6 right-6">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-                    className="w-10 h-10 rounded-full bg-black/20 hover:bg-black/40 text-white border border-white/30 backdrop-blur-sm transition-all"
-                    data-testid="button-autoplay-toggle"
-                  >
-                    {isAutoPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                  </Button>
-                </div>
-
-                {/* Performance Badge */}
-                <div className="absolute top-8 left-8 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4" />
-                    <span>Premium Quality</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Elements */}
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-2xl border border-gray-100">
-                <div className="text-3xl font-bold text-blue-600 mb-1" data-testid="text-clothing-count">8-12</div>
-                <div className="text-gray-600 text-sm font-medium">Pieces of Clothing</div>
-                <div className="text-xs text-gray-500">per 15g pod</div>
-              </div>
-              
-              <div className="absolute -top-6 -left-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-xl shadow-xl">
-                <div className="text-lg font-bold">24/7</div>
-                <div className="text-xs opacity-90">Support</div>
+            {/* Quality Badge */}
+            <div className="absolute top-8 right-8 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-6 py-3 rounded-full shadow-xl">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5" />
+                <span className="font-bold text-sm">PREMIUM QUALITY</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 animate-bounce">
-          <div className="flex flex-col items-center space-y-2">
-            <div className="text-sm font-medium">Scroll Down</div>
-            <ChevronDown className="w-5 h-5" />
           </div>
         </div>
       </section>

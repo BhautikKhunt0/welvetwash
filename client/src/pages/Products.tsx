@@ -470,7 +470,7 @@ export default function Products() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-10 py-4 rounded-full font-bold text-lg transition-all"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-10 py-4 rounded-full font-bold text-lg transition-all"
                 data-testid="button-learn-more"
               >
                 <Star className="w-6 h-6 mr-3" />

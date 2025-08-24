@@ -297,7 +297,7 @@ export default function Products() {
           {/* Product Visual */}
           <div className="text-center mt-12 mb-16">
             <img 
-              src="@assets/image_1756027620913.png" 
+              src="/laundry-pod.png" 
               alt="5-in-1 Multi-colored Laundry Pod with Blue, Green, and Pink Chambers" 
               className="mx-auto rounded-2xl shadow-xl max-w-md w-full h-auto bg-white p-8"
               data-testid="img-product-visual"

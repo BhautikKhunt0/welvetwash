@@ -258,12 +258,12 @@ export default function Home() {
               <p className="text-gray-600 dark:text-gray-300 font-medium">Orders Delivered</p>
             </div>
 
-            <div className="text-center bg-orange-500 p-6 rounded-xl shadow-lg">
+            <div className="average-rating-card text-center p-6 rounded-xl shadow-lg">
               <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-white mb-2" data-testid="text-average-rating">4.9/5</div>
-              <p className="text-white font-medium">Average Rating</p>
+              <div className="text-3xl font-bold mb-2" data-testid="text-average-rating">4.9/5</div>
+              <p className="font-medium">Average Rating</p>
             </div>
 
             <div className="text-center bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg">

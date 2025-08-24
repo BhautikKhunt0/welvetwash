@@ -169,4 +169,14 @@
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
+
+  .average-rating-card {
+    background-color: #f97316 !important;
+    color: white !important;
+  }
+
+  .average-rating-card div,
+  .average-rating-card p {
+    color: white !important;
+  }
 }

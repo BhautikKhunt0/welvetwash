@@ -55,15 +55,18 @@ export default function Home() {
 
             {/* Navigation Dots */}
             <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 flex justify-center">
-              <div className="flex space-x-2">
+              <div className="flex space-x-3">
                 {heroImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                      index === currentImageIndex ? 'bg-white' : 'bg-white/50'
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      currentImageIndex === index
+                        ? 'bg-white shadow-lg'
+                        : 'bg-white/50 hover:bg-white/70'
                     }`}
-                    data-testid={`hero-dot-${index}`}
+                    data-testid={`dot-${index}`}
+                    aria-label={`Switch to image ${index + 1}`}
                   />
                 ))}
               </div>
@@ -344,66 +347,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold mb-2" data-testid="text-customers">10,000+</div>
-              <div className="text-cyan-100">Happy Customers</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2" data-testid="text-orders">50,000+</div>
-              <div className="text-cyan-100">Orders Shipped</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2" data-testid="text-rating">4.9/5</div>
-              <div className="text-cyan-100">Customer Rating</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold mb-2" data-testid="text-countries">25+</div>
-              <div className="text-cyan-100">Countries Served</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <p className="text-xl text-gray-600">Simple, effective, and professional results every time</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Package className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">1. Drop in Pod</h3>
-              <p className="text-gray-600">Simply place one CleanPods Pro pod directly into your washing machine drum before adding clothes.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <RotateCcw className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">2. Start Wash Cycle</h3>
-              <p className="text-gray-600">Run your normal wash cycle. The pod dissolves completely and activates our 5-in-1 formula.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">3. Enjoy Fresh Results</h3>
-              <p className="text-gray-600">Remove perfectly clean, fresh-smelling clothes with lasting fragrance and vibrant colors.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Environmental Impact */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -466,7 +409,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
+      <section className="py-20 gradient-bg text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl font-bold mb-6">Ready to Transform Your Laundry?</h2>
           <p className="text-xl text-blue-100 mb-8 leading-relaxed">
@@ -475,14 +418,14 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <Link href="/contact">
-              <Button className="bg-white text-cyan-600 hover:bg-gray-100 transition-all transform hover:scale-105 px-10 py-4 rounded-full font-bold text-lg shadow-xl">
+              <Button className="bg-white text-brand-blue hover:bg-gray-100 transition-all transform hover:scale-105 px-10 py-4 rounded-full font-bold text-lg shadow-xl">
                 Get Your Quote Now
               </Button>
             </Link>
             <Link href="/products">
               <Button 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 transition-all px-10 py-4 rounded-full font-bold text-lg"
+                className="border-2 border-white text-white hover:bg-white hover:text-brand-blue transition-all px-10 py-4 rounded-full font-bold text-lg"
               >
                 View Product Details
               </Button>

@@ -41,7 +41,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
             
             {/* Text at Bottom Center */}
-            <div className="absolute bottom-8 left-0 right-0 flex justify-center">
+            <div className="absolute bottom-16 left-0 right-0 flex justify-center">
               <div className="text-center text-white max-w-2xl px-6">
                 <h1 className="text-2xl md:text-3xl font-bold mb-2">
                   5-in-1 Revolutionary Laundry Pods
@@ -49,6 +49,25 @@ export default function Home() {
                 <p className="text-sm md:text-base text-gray-200">
                   Experience professional-grade cleaning with 99% efficiency
                 </p>
+              </div>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="absolute bottom-6 left-0 right-0 flex justify-center">
+              <div className="flex space-x-3">
+                {heroImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      currentImageIndex === index
+                        ? 'bg-white shadow-lg'
+                        : 'bg-white/50 hover:bg-white/70'
+                    }`}
+                    data-testid={`dot-${index}`}
+                    aria-label={`Switch to image ${index + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </div>

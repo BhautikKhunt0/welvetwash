@@ -565,119 +565,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA - Professional Grade Design */}
-      <section className="relative py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-20 left-20 w-64 h-64 bg-white rounded-full blur-3xl opacity-20"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-400 rounded-full blur-3xl opacity-15"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-400 rounded-full blur-3xl opacity-10"></div>
-          </div>
-        </div>
-        
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 border border-white/10 rounded-full"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 border border-cyan-400/20 rounded-full"></div>
-        </div>
-
-        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8">
-              <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-100 text-sm font-medium">Revolutionary 5-in-1 Technology</span>
-            </div>
-
-            {/* Main Headline */}
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-              <span className="bg-gradient-to-r from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent">
-                Ready to Transform
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
-                Your Laundry?
-              </span>
-            </h2>
-
-            {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-cyan-100/90 max-w-4xl mx-auto mb-12 leading-relaxed font-light">
-              Join thousands of satisfied customers and experience the future of laundry care with 
-              <span className="font-semibold text-white"> CleanPods Pro's</span> revolutionary cleaning technology.
-            </p>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+      {/* Final CTA */}
+      <section className="py-20 gradient-bg text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-5xl font-bold mb-6">
+            Ready to Transform Your Laundry?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+            Join thousands of satisfied customers and experience the future of
+            laundry care with CleanPods Pro's revolutionary 5-in-1 technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <Link href="/contact">
               <Button
-                size="lg"
-                className="group relative w-full sm:w-auto bg-gradient-to-r from-white to-cyan-50 text-slate-900 hover:from-cyan-50 hover:to-white transition-all duration-300 transform hover:scale-105 px-12 py-6 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-white/25 border-0 overflow-hidden"
+                className="w-full sm:w-auto bg-white text-cyan-600 hover:bg-gray-100 transition-all transform hover:scale-105 px-10 py-4 rounded-full font-bold text-lg shadow-xl"
                 data-testid="button-get-quote-cta"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative flex items-center justify-center">
-                  <Zap className="w-5 h-5 mr-3 text-cyan-600" />
-                  Get Your Quote Now
-                </div>
+                Get Your Quote Now
               </Button>
             </Link>
-            
             <Link href="/products">
               <Button
-                size="lg"
-                className="group relative w-full sm:w-auto bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 backdrop-blur-sm transition-all duration-300 transform hover:scale-105 px-12 py-6 rounded-2xl font-bold text-lg shadow-lg overflow-hidden"
+                className="w-full sm:w-auto bg-cyan-600 text-white hover:bg-cyan-700 border-2 border-cyan-600 hover:border-cyan-700 transition-all transform hover:scale-105 px-10 py-4 rounded-full font-bold text-lg shadow-lg"
                 data-testid="button-view-products-cta"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative flex items-center justify-center">
-                  <Package className="w-5 h-5 mr-3" />
-                  View Product Details
-                </div>
+                View Product Details
               </Button>
             </Link>
           </div>
-
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center space-x-3 text-cyan-100/80">
-              <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full">
-                <Clock className="w-5 h-5 text-cyan-400" />
-              </div>
-              <div>
-                <div className="font-semibold text-white">24-Hour Response</div>
-                <div className="text-sm">Fast customer support</div>
-              </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-blue-200">
+            <div className="flex items-center space-x-2">
+              <Clock className="w-4 h-4" />
+              <span>24-hour response time</span>
             </div>
-            
-            <div className="flex items-center justify-center space-x-3 text-cyan-100/80">
-              <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full">
-                <Globe className="w-5 h-5 text-cyan-400" />
-              </div>
-              <div>
-                <div className="font-semibold text-white">Worldwide Shipping</div>
-                <div className="text-sm">Global delivery available</div>
-              </div>
+            <div className="flex items-center space-x-2">
+              <Globe className="w-4 h-4" />
+              <span>Worldwide shipping</span>
             </div>
-            
-            <div className="flex items-center justify-center space-x-3 text-cyan-100/80">
-              <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full">
-                <Shield className="w-5 h-5 text-cyan-400" />
-              </div>
-              <div>
-                <div className="font-semibold text-white">100% Guarantee</div>
-                <div className="text-sm">Complete satisfaction</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Accent */}
-          <div className="text-center mt-12">
-            <div className="inline-flex items-center space-x-2 text-cyan-300/60">
-              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">Trusted by 10,000+ customers worldwide</span>
-              <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+            <div className="flex items-center space-x-2">
+              <Shield className="w-4 h-4" />
+              <span>100% satisfaction guarantee</span>
             </div>
           </div>
         </div>

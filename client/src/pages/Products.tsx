@@ -241,104 +241,127 @@ export default function Products() {
             <p className="text-xl text-gray-600">Authentic Laundry Detergent Pods - Professional Grade Quality</p>
           </div>
 
-          {/* Mobile Card Layout - shown on small screens */}
-          <div className="sm:hidden bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="space-y-4 p-4">
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">Product Name</h3>
-                <p className="text-gray-600 text-sm">Authentic Laundry Detergent Pods</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">Functions</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">Detergent + Bacteria & Mites Removal 99.9% + Softener + Long Lasting Fragrances + Blend Enzymes</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">Fragrances</h3>
-                <p className="text-gray-600 text-sm">Customized / As shown in picture</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">Color</h3>
-                <p className="text-gray-600 text-sm">Customized / As shown in picture</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">Weight</h3>
-                <p className="text-gray-600 text-sm">15g*30pcs*32bag/Carton</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">Film</h3>
-                <p className="text-gray-600 text-sm">Water-soluble Film</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">Packaging</h3>
-                <p className="text-gray-600 text-sm">Boxes/Bags or Pouches/Cartons or customized</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">Origin</h3>
-                <p className="text-gray-600 text-sm">Guangzhou Guangdong Province, China</p>
-              </div>
-              <div className="border-b border-gray-200 pb-4">
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">Certificate</h3>
-                <p className="text-gray-600 text-sm">ISO/MSDS/SMETA 6.1</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-900 text-sm mb-2">Order (MOQ)</h3>
-                <p className="text-gray-600 text-sm">One Carton of spot goods/customized</p>
+          {/* Mobile-Optimized Specification Cards */}
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg" data-testid="spec-icon-product">P</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Product Name</h3>
+                  <p className="text-sm text-gray-600 break-words">Authentic Laundry Detergent Pods</p>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Desktop Table Layout - shown on larger screens */}
-          <div className="hidden sm:block bg-white rounded-2xl shadow-lg overflow-hidden overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="bg-gradient-to-r from-cyan-50 to-blue-50 border-b border-gray-200">
-                  <th className="px-6 lg:px-8 py-4 text-left text-base lg:text-lg font-semibold text-gray-900">Specification</th>
-                  <th className="px-6 lg:px-8 py-4 text-left text-base lg:text-lg font-semibold text-gray-900">Details</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Product Name</td>
-                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Authentic Laundry Detergent Pods</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Functions</td>
-                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base leading-relaxed">Detergent + Bacteria & Mites Removal 99.9% + Softener + Long Lasting Fragrances + Blend Enzymes</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Fragrances</td>
-                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Customized / As shown in picture</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Color</td>
-                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Customized / As shown in picture</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Weight</td>
-                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">15g*30pcs*32bag/Carton</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Film</td>
-                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Water-soluble Film</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Packaging</td>
-                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Boxes/Bags or Pouches/Cartons or customized</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Origin</td>
-                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Guangzhou Guangdong Province, China</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Certificate</td>
-                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">ISO/MSDS/SMETA 6.1</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base border-b-0 whitespace-nowrap">Order (MOQ)</td>
-                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base border-b-0">One Carton of spot goods/customized</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg" data-testid="spec-icon-functions">F</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Functions</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed break-words">Detergent + Bacteria & Mites Removal 99.9% + Softener + Long Lasting Fragrances + Blend Enzymes</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg" data-testid="spec-icon-fragrance">FR</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Fragrances</h3>
+                  <p className="text-sm text-gray-600 break-words">Customized / As shown in picture</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg" data-testid="spec-icon-color">C</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Color</h3>
+                  <p className="text-sm text-gray-600 break-words">Customized / As shown in picture</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg" data-testid="spec-icon-weight">W</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Weight</h3>
+                  <p className="text-sm text-gray-600 break-words">15g*30pcs*32bag/Carton</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg" data-testid="spec-icon-film">FL</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Film</h3>
+                  <p className="text-sm text-gray-600 break-words">Water-soluble Film</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg" data-testid="spec-icon-packaging">PK</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Packaging</h3>
+                  <p className="text-sm text-gray-600 break-words">Boxes/Bags or Pouches/Cartons or customized</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg" data-testid="spec-icon-origin">O</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Origin</h3>
+                  <p className="text-sm text-gray-600 break-words">Guangzhou Guangdong Province, China</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg" data-testid="spec-icon-certificate">CR</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Certificate</h3>
+                  <p className="text-sm text-gray-600 break-words">ISO/MSDS/SMETA 6.1</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg" data-testid="spec-icon-order">MQ</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">Order (MOQ)</h3>
+                  <p className="text-sm text-gray-600 break-words">One Carton of spot goods/customized</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Product Visual */}

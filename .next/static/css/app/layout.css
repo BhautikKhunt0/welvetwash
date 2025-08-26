@@ -974,11 +974,11 @@ body{
 .min-w-9{
   min-width: 2.25rem;
 }
+.min-w-\[1000px\]{
+  min-width: 1000px;
+}
 .min-w-\[12rem\]{
   min-width: 12rem;
-}
-.min-w-\[800px\]{
-  min-width: 800px;
 }
 .min-w-\[8rem\]{
   min-width: 8rem;

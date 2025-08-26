@@ -243,8 +243,8 @@ export default function Products() {
 
           {/* Horizontal Scrollable Table */}
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[800px]">
+            <div className="overflow-x-auto scrollbar-visible" style={{scrollbarWidth: 'auto', msOverflowStyle: 'auto'}}>
+              <table className="w-full min-w-[1000px]">
                 <thead>
                   <tr className="bg-gradient-to-r from-cyan-50 to-blue-50 border-b border-gray-200">
                     <th className="px-4 sm:px-6 lg:px-8 py-4 text-left text-sm sm:text-base lg:text-lg font-semibold text-gray-900 whitespace-nowrap">Specification</th>

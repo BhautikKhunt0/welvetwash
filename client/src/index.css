@@ -179,4 +179,30 @@
   .average-rating-card p {
     color: white !important;
   }
+
+  /* Force horizontal scrollbar to be visible on tables */
+  .scrollbar-visible {
+    overflow-x: auto !important;
+    scrollbar-width: auto !important;
+    -ms-overflow-style: auto !important;
+  }
+
+  .scrollbar-visible::-webkit-scrollbar {
+    height: 12px !important;
+    display: block !important;
+  }
+
+  .scrollbar-visible::-webkit-scrollbar-track {
+    background: #f1f5f9 !important;
+    border-radius: 6px !important;
+  }
+
+  .scrollbar-visible::-webkit-scrollbar-thumb {
+    background: #cbd5e1 !important;
+    border-radius: 6px !important;
+  }
+
+  .scrollbar-visible::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8 !important;
+  }
 }

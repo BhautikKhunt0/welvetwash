@@ -241,54 +241,101 @@ export default function Product2() {
             <p className="text-xl text-gray-600">Premium 7-in-1 Laundry Detergent Pods - Luxury Professional Grade</p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden overflow-x-auto">
-            <table className="w-full min-w-[600px]">
+          {/* Mobile Card Layout - shown on small screens */}
+          <div className="sm:hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="space-y-4 p-4">
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Product Name</h3>
+                <p className="text-gray-600 text-sm">Premium 7-in-1 Laundry Detergent Pods</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Functions</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">Advanced Detergent + 99.9% Anti-Bacterial + Premium Softener + Luxury Fragrance + Stain Removal + Color Protection + Eco-Friendly Technology</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Fragrances</h3>
+                <p className="text-gray-600 text-sm">Premium Luxury Collection / Customized Options Available</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Color</h3>
+                <p className="text-gray-600 text-sm">Premium Multi-Color Design / Custom Options</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Weight</h3>
+                <p className="text-gray-600 text-sm">20g*24pcs*20bag/Carton</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Film</h3>
+                <p className="text-gray-600 text-sm">Premium Water-soluble Film Technology</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Packaging</h3>
+                <p className="text-gray-600 text-sm">Premium Luxury Boxes/Premium Pouches or Customized</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Origin</h3>
+                <p className="text-gray-600 text-sm">Guangzhou Guangdong Province, China</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Certificate</h3>
+                <p className="text-gray-600 text-sm">ISO/MSDS/SMETA 6.1/Premium Quality Certification</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Order (MOQ)</h3>
+                <p className="text-gray-600 text-sm">Premium Sample Available/Customized Orders</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Table Layout - shown on larger screens */}
+          <div className="hidden sm:block bg-white rounded-2xl shadow-lg overflow-hidden overflow-x-auto">
+            <table className="w-full">
               <thead>
                 <tr className="bg-gradient-to-r from-cyan-50 to-blue-50 border-b border-gray-200">
-                  <th className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-left text-sm sm:text-base lg:text-lg font-semibold text-gray-900">Specification</th>
-                  <th className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-left text-sm sm:text-base lg:text-lg font-semibold text-gray-900">Details</th>
+                  <th className="px-6 lg:px-8 py-4 text-left text-base lg:text-lg font-semibold text-gray-900">Specification</th>
+                  <th className="px-6 lg:px-8 py-4 text-left text-base lg:text-lg font-semibold text-gray-900">Details</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Product Name</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Premium 7-in-1 Laundry Detergent Pods</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Product Name</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Premium 7-in-1 Laundry Detergent Pods</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Functions</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base leading-relaxed">Advanced Detergent + 99.9% Anti-Bacterial + Premium Softener + Luxury Fragrance + Stain Removal + Color Protection + Eco-Friendly Technology</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Functions</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base leading-relaxed">Advanced Detergent + 99.9% Anti-Bacterial + Premium Softener + Luxury Fragrance + Stain Removal + Color Protection + Eco-Friendly Technology</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Fragrances</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Premium Luxury Collection / Customized Options Available</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Fragrances</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Premium Luxury Collection / Customized Options Available</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Color</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Premium Multi-Color Design / Custom Options</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Color</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Premium Multi-Color Design / Custom Options</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Weight</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">20g*24pcs*20bag/Carton</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Weight</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">20g*24pcs*20bag/Carton</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Film</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Premium Water-soluble Film Technology</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Film</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Premium Water-soluble Film Technology</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Packaging</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Premium Luxury Boxes/Premium Pouches or Customized</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Packaging</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Premium Luxury Boxes/Premium Pouches or Customized</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Origin</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Guangzhou Guangdong Province, China</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Origin</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Guangzhou Guangdong Province, China</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Certificate</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">ISO/MSDS/SMETA 6.1/Premium Quality Certification</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Certificate</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">ISO/MSDS/SMETA 6.1/Premium Quality Certification</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base border-b-0 whitespace-nowrap">Order (MOQ)</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base border-b-0">Premium Sample Available/Customized Orders</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base border-b-0 whitespace-nowrap">Order (MOQ)</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base border-b-0">Premium Sample Available/Customized Orders</td>
                 </tr>
               </tbody>
             </table>

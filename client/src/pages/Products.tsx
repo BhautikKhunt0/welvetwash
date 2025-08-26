@@ -241,54 +241,101 @@ export default function Products() {
             <p className="text-xl text-gray-600">Authentic Laundry Detergent Pods - Professional Grade Quality</p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg overflow-hidden overflow-x-auto">
-            <table className="w-full min-w-[600px]">
+          {/* Mobile Card Layout - shown on small screens */}
+          <div className="sm:hidden bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="space-y-4 p-4">
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Product Name</h3>
+                <p className="text-gray-600 text-sm">Authentic Laundry Detergent Pods</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Functions</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">Detergent + Bacteria & Mites Removal 99.9% + Softener + Long Lasting Fragrances + Blend Enzymes</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Fragrances</h3>
+                <p className="text-gray-600 text-sm">Customized / As shown in picture</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Color</h3>
+                <p className="text-gray-600 text-sm">Customized / As shown in picture</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Weight</h3>
+                <p className="text-gray-600 text-sm">15g*30pcs*32bag/Carton</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Film</h3>
+                <p className="text-gray-600 text-sm">Water-soluble Film</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Packaging</h3>
+                <p className="text-gray-600 text-sm">Boxes/Bags or Pouches/Cartons or customized</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Origin</h3>
+                <p className="text-gray-600 text-sm">Guangzhou Guangdong Province, China</p>
+              </div>
+              <div className="border-b border-gray-200 pb-4">
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Certificate</h3>
+                <p className="text-gray-600 text-sm">ISO/MSDS/SMETA 6.1</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-sm mb-2">Order (MOQ)</h3>
+                <p className="text-gray-600 text-sm">One Carton of spot goods/customized</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Table Layout - shown on larger screens */}
+          <div className="hidden sm:block bg-white rounded-2xl shadow-lg overflow-hidden overflow-x-auto">
+            <table className="w-full">
               <thead>
                 <tr className="bg-gradient-to-r from-cyan-50 to-blue-50 border-b border-gray-200">
-                  <th className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-left text-sm sm:text-base lg:text-lg font-semibold text-gray-900">Specification</th>
-                  <th className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-left text-sm sm:text-base lg:text-lg font-semibold text-gray-900">Details</th>
+                  <th className="px-6 lg:px-8 py-4 text-left text-base lg:text-lg font-semibold text-gray-900">Specification</th>
+                  <th className="px-6 lg:px-8 py-4 text-left text-base lg:text-lg font-semibold text-gray-900">Details</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Product Name</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Authentic Laundry Detergent Pods</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Product Name</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Authentic Laundry Detergent Pods</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Functions</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base leading-relaxed">Detergent + Bacteria & Mites Removal 99.9% + Softener + Long Lasting Fragrances + Blend Enzymes</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Functions</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base leading-relaxed">Detergent + Bacteria & Mites Removal 99.9% + Softener + Long Lasting Fragrances + Blend Enzymes</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Fragrances</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Customized / As shown in picture</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Fragrances</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Customized / As shown in picture</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Color</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Customized / As shown in picture</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Color</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Customized / As shown in picture</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Weight</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">15g*30pcs*32bag/Carton</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Weight</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">15g*30pcs*32bag/Carton</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Film</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Water-soluble Film</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Film</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Water-soluble Film</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Packaging</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Boxes/Bags or Pouches/Cartons or customized</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Packaging</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Boxes/Bags or Pouches/Cartons or customized</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Origin</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">Guangzhou Guangdong Province, China</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Origin</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">Guangzhou Guangdong Province, China</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Certificate</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base">ISO/MSDS/SMETA 6.1</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base whitespace-nowrap">Certificate</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base">ISO/MSDS/SMETA 6.1</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors duration-200">
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 font-semibold text-gray-900 text-sm sm:text-base border-b-0 whitespace-nowrap">Order (MOQ)</td>
-                  <td className="px-3 sm:px-6 lg:px-8 py-3 sm:py-4 text-gray-600 text-sm sm:text-base border-b-0">One Carton of spot goods/customized</td>
+                  <td className="px-6 lg:px-8 py-4 font-semibold text-gray-900 text-base border-b-0 whitespace-nowrap">Order (MOQ)</td>
+                  <td className="px-6 lg:px-8 py-4 text-gray-600 text-base border-b-0">One Carton of spot goods/customized</td>
                 </tr>
               </tbody>
             </table>

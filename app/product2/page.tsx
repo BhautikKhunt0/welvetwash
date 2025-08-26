@@ -53,12 +53,12 @@ export default function Product2() {
       {/* Product Hero */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">7-in-1 Premium Laundry Pods</h1>
+          <h1 className="text-5xl font-bold mb-6">5-in-1 Deep Clean Best Seller</h1>
           <p className="text-xl text-cyan-100 max-w-3xl mx-auto mb-8">
-            Experience Premium Care with Our Advanced 7 in 1 Formula - Deep Clean + Anti-Bacterial + Color Protection + Fabric Softening + Long-Lasting Fragrance + Stain Removal + Eco-Friendly Technology for Ultimate Laundry Experience
+            Friction-Activated Fragrance with Microcapsule Magic - Detergent + Bacteria & Mites Removal 99.9% + Softener + Givaudan Long Lasting Fragrances + Blend Enzymes
           </p>
           <div className="inline-block bg-white/20 px-6 py-3 rounded-full backdrop-blur-md">
-            <span className="text-lg font-semibold">Premium Collection Excellence</span>
+            <span className="text-lg font-semibold">North Island Premium Quality</span>
           </div>
         </div>
       </section>
@@ -172,64 +172,72 @@ export default function Product2() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Premium Product Advantages</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Product Advantages</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-blue-50 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-white" />
+            <div className="bg-cyan-50 p-8 rounded-2xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Advanced Antimicrobial Protection</h3>
-              <p className="text-gray-600">Premium 99.9% elimination rate of bacteria, viruses, and harmful microorganisms with enhanced protection technology.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Friction-Activated Fragrance: Microcapsule Magic</h3>
+              <p className="text-gray-600">Our microcapsule tech lets fragrance seep into the fabric during wear or exercise, releasing a continuous, pleasant scent.</p>
             </div>
 
-            <div className="bg-green-50 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mb-6">
-                <Leaf className="w-8 h-8 text-white" />
+            <div className="bg-rose-50 p-8 rounded-2xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full flex items-center justify-center mb-6">
+                <Thermometer className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Ultra-Deep Premium Cleaning</h3>
-              <p className="text-gray-600">Advanced enzyme technology with premium bio-active ingredients for superior fabric care and deep fiber cleaning.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">70%-80% High-Concentration: Laundry's Powerhouse</h3>
+              <p className="text-gray-600">Loaded with active ingredients, it ensures clothes come out spotless, a reliable choice for clean laundry.</p>
             </div>
 
             <div className="bg-purple-50 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-6">
-                <Heart className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-500 rounded-full flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Premium Hypoallergenic Formula</h3>
-              <p className="text-gray-600">Advanced dermatologically tested formula, completely free from harsh chemicals and safe for sensitive skin and premium fabrics.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Banish Bacteria and Mites: Hidden Threats No More</h3>
+              <p className="text-gray-600">Our product combats unseen bacteria and mites, promising a hygienic, comfortable clothing experience.</p>
+            </div>
+
+            <div className="bg-green-50 p-8 rounded-2xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mb-6">
+                <Palette className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Renowned Brand Givaudan Scents: Long-Lasting Elegance</h3>
+              <p className="text-gray-600">Featuring high-end fragrances, clothes carry a sophisticated, lingering aroma.</p>
             </div>
 
             <div className="bg-orange-50 p-8 rounded-2xl">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-6">
-                <Sprout className="w-8 h-8 text-white" />
+                <Leaf className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Luxury Skin-Safe Technology</h3>
-              <p className="text-gray-600">Premium pH-balanced formula with luxury moisturizing agents, gentle on hands and suitable for the most delicate fabrics.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Pledge: Sustainable by Design</h3>
+              <p className="text-gray-600">Using natural fragrances and biodegradable film, we safeguard the planet from production.</p>
             </div>
 
-            <div className="bg-cyan-50 p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mb-6">
+            <div className="bg-blue-50 p-8 rounded-2xl">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mb-6">
                 <Clock className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Premium Quick-Rinse Technology</h3>
-              <p className="text-gray-600">Advanced low-foam formula with premium rinsing technology, ensuring zero residue and crystal-clear wash results.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Hassle-Free Rinse</h3>
+              <p className="text-gray-600">Low-foam formula rinses out effortlessly, leaving no soapy residue, saving time and water during rinse cycle.</p>
             </div>
 
             <div className="bg-emerald-50 p-8 rounded-2xl">
               <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full flex items-center justify-center mb-6">
                 <Package className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Premium Eco-Luxury Packaging</h3>
-              <p className="text-gray-600">Advanced water-soluble premium film technology with zero environmental impact, combining luxury with sustainability.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Eco-Friendly Packaging</h3>
+              <p className="text-gray-600">Imported water-soluble film dissolves rapidly with zero residue, reducing waste and aligning with sustainable practices.</p>
             </div>
 
             <div className="bg-indigo-50 p-8 rounded-2xl">
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
                 <Award className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Premium Durability Design</h3>
-              <p className="text-gray-600">Enhanced pressure resistance up to 800N, premium construction ensures maximum durability and quality preservation during storage.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Durable Design</h3>
+              <p className="text-gray-600">Built to withstand pressure up to 600N, these laundry pods are resistant to compression, maintaining quality during storage.</p>
             </div>
           </div>
         </div>
@@ -239,8 +247,8 @@ export default function Product2() {
       <section className="py-20 bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Premium Product Specifications</h2>
-            <p className="text-xl text-gray-600">Premium 7-in-1 Laundry Detergent Pods - Luxury Professional Grade</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Product Specifications</h2>
+            <p className="text-xl text-gray-600">5-in-1 Deep Clean Best Seller - Authentic Laundry Detergent Pods</p>
           </div>
 
           {/* Horizontal Scrollable Table */}
@@ -256,31 +264,31 @@ export default function Product2() {
                 <tbody className="divide-y divide-gray-200">
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Product Name</td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">Premium 7-in-1 Laundry Detergent Pods</td>
+                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">Authentic Laundry Detergent Pods</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Functions</td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base leading-relaxed">Advanced Detergent + 99.9% Anti-Bacterial + Premium Softener + Luxury Fragrance + Stain Removal + Color Protection + Eco-Friendly Technology</td>
+                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base leading-relaxed">Detergent + Bacteria & Mites Removal 99.9% + Softener + Long Lasting Fragrances + Blend Enzymes</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Fragrances</td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">Premium Luxury Collection / Customized Options Available</td>
+                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">As shown in the picture or Customized</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Color</td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">Premium Multi-Color Design / Custom Options</td>
+                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">As shown in the picture / Customized</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Weight</td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">20g*24pcs*20bag/Carton</td>
+                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">15g</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Film</td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">Premium Water-soluble Film Technology</td>
+                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">Water-soluble Film</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Packaging</td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">Premium Luxury Boxes/Premium Pouches or Customized</td>
+                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">Boxes/Bags or Pouches/Cartons or customized</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Origin</td>
@@ -288,11 +296,11 @@ export default function Product2() {
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">Certificate</td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">ISO/MSDS/SMETA 6.1/Premium Quality Certification</td>
+                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">ISO/MSDS/SMETA 6.1</td>
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base border-b-0 whitespace-nowrap">Order (MOQ)</td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base border-b-0">Premium Sample Available/Customized Orders</td>
+                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base border-b-0">One Cartons of spot goods/customized</td>
                   </tr>
                 </tbody>
               </table>
@@ -303,32 +311,32 @@ export default function Product2() {
           <div className="text-center mt-12 mb-16">
             <img 
               src="/laundry-pod.png" 
-              alt="7-in-1 Premium Multi-colored Laundry Pod with Enhanced Chamber Technology" 
+              alt="5-in-1 Multi-colored Laundry Pod with Blue, Green, and Pink Chambers" 
               className="mx-auto rounded-2xl shadow-xl max-w-md w-full h-auto bg-white p-8"
               data-testid="img-product-visual"
             />
             <p className="text-lg text-gray-600 mt-6 font-medium">
-              Revolutionary 7-in-1 Premium Formula: Advanced Multi-Chamber Technology
+              Revolutionary 5-in-1 Formula: Multi-Chamber Technology
             </p>
           </div>
 
           {/* Key Stats */}
           <div className="grid md:grid-cols-4 gap-8 mt-16">
             <div className="text-center bg-white p-8 rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-blue-600 mb-2" data-testid="text-concentration">85%-90%</div>
-              <div className="text-gray-600 font-medium">Ultra-High Concentration</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2" data-testid="text-concentration">70%-80%</div>
+              <div className="text-gray-600 font-medium">High Concentration</div>
             </div>
             <div className="text-center bg-white p-8 rounded-2xl shadow-lg">
               <div className="text-4xl font-bold text-green-600 mb-2" data-testid="text-bacteria-removal">99.9%</div>
-              <div className="text-gray-600 font-medium">Advanced Anti-Bacterial</div>
+              <div className="text-gray-600 font-medium">Bacteria & Mites Removal</div>
             </div>
             <div className="text-center bg-white p-8 rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-purple-600 mb-2" data-testid="text-weight">20G</div>
-              <div className="text-gray-600 font-medium">Premium Pod Weight</div>
+              <div className="text-4xl font-bold text-purple-600 mb-2" data-testid="text-weight">15G</div>
+              <div className="text-gray-600 font-medium">Per Pod Weight</div>
             </div>
             <div className="text-center bg-white p-8 rounded-2xl shadow-lg">
-              <div className="text-4xl font-bold text-orange-600 mb-2" data-testid="text-pressure">800N</div>
-              <div className="text-gray-600 font-medium">Enhanced Durability</div>
+              <div className="text-4xl font-bold text-orange-600 mb-2" data-testid="text-pressure">600N</div>
+              <div className="text-gray-600 font-medium">Pressure Resistance</div>
             </div>
           </div>
         </div>

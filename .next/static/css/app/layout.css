@@ -977,6 +977,9 @@ body{
 .min-w-\[12rem\]{
   min-width: 12rem;
 }
+.min-w-\[600px\]{
+  min-width: 600px;
+}
 .min-w-\[8rem\]{
   min-width: 8rem;
 }
@@ -1259,6 +1262,9 @@ body{
 }
 .overflow-hidden{
   overflow: hidden;
+}
+.overflow-x-auto{
+  overflow-x: auto;
 }
 .overflow-y-auto{
   overflow-y: auto;
@@ -3710,6 +3716,10 @@ body{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+  .sm\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   .sm\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -3720,6 +3730,10 @@ body{
   .sm\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+  .sm\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   .sm\:text-lg{
     font-size: 1.125rem;
@@ -3860,6 +3874,10 @@ body{
   .lg\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  .lg\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 

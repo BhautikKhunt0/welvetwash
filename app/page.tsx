@@ -255,6 +255,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Product Images Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Products
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our premium laundry solutions designed for exceptional performance
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {/* Product 1 */}
+            <div className="text-center">
+              <div className="relative overflow-hidden rounded-2xl shadow-lg mb-6">
+                <img
+                  src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                  alt="CleanPods Pro Original"
+                  className="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+                  data-testid="img-product-original"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2" data-testid="text-product-original-name">
+                CleanPods Pro Original
+              </h3>
+              <p className="text-gray-600">5-in-1 Advanced Formula</p>
+            </div>
+
+            {/* Product 2 */}
+            <div className="text-center">
+              <div className="relative overflow-hidden rounded-2xl shadow-lg mb-6">
+                <img
+                  src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                  alt="CleanPods Pro Sensitive"
+                  className="w-full h-80 object-cover hover:scale-105 transition-transform duration-300"
+                  data-testid="img-product-sensitive"
+                />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2" data-testid="text-product-sensitive-name">
+                CleanPods Pro Sensitive
+              </h3>
+              <p className="text-gray-600">Gentle Care for Delicate Fabrics</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Technical Specifications */}
       <section className="py-20 bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

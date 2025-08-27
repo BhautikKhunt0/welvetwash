@@ -605,10 +605,6 @@ body{
   margin-left: 0.875rem;
   margin-right: 0.875rem;
 }
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1897,9 +1893,6 @@ body{
 }
 .pt-4{
   padding-top: 1rem;
-}
-.pt-6{
-  padding-top: 1.5rem;
 }
 .text-left{
   text-align: left;
@@ -3629,9 +3622,6 @@ body{
   }
   .sm\:max-w-sm{
     max-width: 24rem;
-  }
-  .sm\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .sm\:grid-cols-6{
     grid-template-columns: repeat(6, minmax(0, 1fr));

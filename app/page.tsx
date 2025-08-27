@@ -255,6 +255,86 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Products */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Premium Product Line</h2>
+            <p className="text-xl text-gray-600">Advanced Laundry Solutions for Every Need</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Product 1: 5-in-1 Laundry Pods */}
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-center">
+                <div className="relative mx-auto mb-8 w-80 h-80 overflow-hidden rounded-2xl bg-white shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
+                    alt="5-in-1 Multi-Function Laundry Pods"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    data-testid="img-product-5in1"
+                  />
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Best Seller
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="text-product-name-5in1">
+                  5-in-1 Multi-Function Laundry Pods
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Premium detergent with anti-bacterial protection, fabric softening, color guard, 
+                  and long-lasting fragrance technology in one convenient pod.
+                </p>
+                <div className="flex justify-center space-x-4">
+                  <div className="flex items-center bg-blue-100 px-3 py-2 rounded-full">
+                    <Shield className="w-4 h-4 text-blue-600 mr-2" />
+                    <span className="text-sm font-medium text-blue-800">99.9% Anti-Bacterial</span>
+                  </div>
+                  <div className="flex items-center bg-green-100 px-3 py-2 rounded-full">
+                    <Leaf className="w-4 h-4 text-green-600 mr-2" />
+                    <span className="text-sm font-medium text-green-800">Eco-Friendly</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Product 2: 7-in-1 Laundry Pods */}
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-center">
+                <div className="relative mx-auto mb-8 w-80 h-80 overflow-hidden rounded-2xl bg-white shadow-lg">
+                  <img 
+                    src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
+                    alt="7-in-1 Premium Laundry Pods"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    data-testid="img-product-7in1"
+                  />
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Premium
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="text-product-name-7in1">
+                  7-in-1 Premium Advanced Laundry Pods
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Ultimate cleaning solution with stain removal, whitening, brightening, 
+                  plus all the benefits of our 5-in-1 formula for professional results.
+                </p>
+                <div className="flex justify-center space-x-4">
+                  <div className="flex items-center bg-purple-100 px-3 py-2 rounded-full">
+                    <Zap className="w-4 h-4 text-purple-600 mr-2" />
+                    <span className="text-sm font-medium text-purple-800">Stain Fighter</span>
+                  </div>
+                  <div className="flex items-center bg-pink-100 px-3 py-2 rounded-full">
+                    <TrendingUp className="w-4 h-4 text-pink-600 mr-2" />
+                    <span className="text-sm font-medium text-pink-800">Color Boost</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Technical Specifications */}
       <section className="py-20 bg-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

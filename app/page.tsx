@@ -645,6 +645,124 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Product Brochures */}
+      <section className="py-20 bg-gradient-to-r from-slate-50 to-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Product Brochures</h2>
+            <p className="text-xl text-gray-600">Detailed information about our premium laundry solutions</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* English Brochure */}
+            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">English Brochure</h3>
+                <p className="text-gray-600">Complete product details and specifications</p>
+              </div>
+              
+              <div className="bg-gray-50 rounded-2xl p-8 min-h-[600px]" data-testid="brochure-english">
+                <iframe 
+                  src="/attached_assets/English Brochur welvet wash_1756269718349.pdf" 
+                  width="100%" 
+                  height="600"
+                  className="rounded-lg border-0"
+                  title="English Product Brochure"
+                  style={{pointerEvents: 'none'}}
+                >
+                  <div className="text-center py-12">
+                    <h4 className="text-xl font-bold text-gray-900 mb-6">Welvet Wash - Premium Laundry Pods</h4>
+                    <div className="space-y-4 text-left max-w-md mx-auto">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                        <span className="text-gray-700">Detergent</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-green-600 rounded-full"></div>
+                        <span className="text-gray-700">Bacteria & Mites Removal 99.9%</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+                        <span className="text-gray-700">Softener</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-pink-600 rounded-full"></div>
+                        <span className="text-gray-700">Long Lasting Fragrances</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-orange-600 rounded-full"></div>
+                        <span className="text-gray-700">Blend Enzymes</span>
+                      </div>
+                    </div>
+                    <div className="mt-8 pt-6 border-t border-gray-200">
+                      <p className="text-sm text-gray-600">Contact: +91 99743 98064</p>
+                      <p className="text-sm text-gray-600">support@welvetwash.com</p>
+                      <p className="text-sm text-gray-600">www.welvetwash.com</p>
+                    </div>
+                  </div>
+                </iframe>
+              </div>
+            </div>
+
+            {/* Gujarati Brochure */}
+            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-center mb-8">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Leaf className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">ગુજરાતી બ્રોશર</h3>
+                <p className="text-gray-600">Gujarati language product information</p>
+              </div>
+              
+              <div className="bg-gray-50 rounded-2xl p-8 min-h-[600px]" data-testid="brochure-gujarati">
+                <iframe 
+                  src="/attached_assets/Gujrati Brochur welvet wash_1756269718349.pdf" 
+                  width="100%" 
+                  height="600"
+                  className="rounded-lg border-0"
+                  title="Gujarati Product Brochure"
+                  style={{pointerEvents: 'none'}}
+                >
+                  <div className="text-center py-12">
+                    <h4 className="text-xl font-bold text-gray-900 mb-6">વેલવેટ વોશ - પ્રીમિયમ લોન્ડ્રી પોડ્સ</h4>
+                    <div className="space-y-4 text-left max-w-md mx-auto">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+                        <span className="text-gray-700">ડિટર્જન્ટ</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-green-600 rounded-full"></div>
+                        <span className="text-gray-700">બેક્ટેરિયા અને માઇટ્સ દૂર કરે – 99.9% સુધી</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-purple-600 rounded-full"></div>
+                        <span className="text-gray-700">સોફ્ટનર સાથે – કપડાં રહે નરમ</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-pink-600 rounded-full"></div>
+                        <span className="text-gray-700">દીર્ઘકાળ સુધી રહેતી સુગંધ</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-orange-600 rounded-full"></div>
+                        <span className="text-gray-700">એન્ઝાઇમ્સનું સંયોજન</span>
+                      </div>
+                    </div>
+                    <div className="mt-8 pt-6 border-t border-gray-200">
+                      <p className="text-sm text-gray-600">સંપર્ક: +91 99743 98064</p>
+                      <p className="text-sm text-gray-600">support@welvetwash.com</p>
+                      <p className="text-sm text-gray-600">www.welvetwash.com</p>
+                    </div>
+                  </div>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 gradient-bg text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

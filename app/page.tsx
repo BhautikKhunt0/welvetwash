@@ -666,7 +666,7 @@ export default function Home() {
               
               <div className="bg-gray-50 rounded-2xl p-8 min-h-[600px]" data-testid="brochure-english">
                 <iframe 
-                  src="/attached_assets/English Brochur welvet wash_1756269718349.pdf" 
+                  src="/brochures/english-brochure.pdf" 
                   width="100%" 
                   height="600"
                   className="rounded-lg border-0"
@@ -719,7 +719,7 @@ export default function Home() {
               
               <div className="bg-gray-50 rounded-2xl p-8 min-h-[600px]" data-testid="brochure-gujarati">
                 <iframe 
-                  src="/attached_assets/Gujrati Brochur welvet wash_1756269718349.pdf" 
+                  src="/brochures/gujarati-brochure.pdf" 
                   width="100%" 
                   height="600"
                   className="rounded-lg border-0"

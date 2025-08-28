@@ -116,7 +116,7 @@ export default function Navigation() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                  CleanPods Pro
+                  WelvetWash
                 </span>
                 <span className="text-xs text-gray-500 hidden sm:block">
                   Professional Cleaning

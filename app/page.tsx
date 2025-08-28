@@ -55,7 +55,7 @@ export default function Home() {
           {/* Hero Banner Image Slideshow */}
           <img
             src={heroImages[currentImageIndex]}
-            alt="CleanPods Pro - Revolutionary Laundry Experience"
+            alt="WelvetWash - Revolutionary Laundry Experience"
             className="w-full h-full object-cover transition-opacity duration-1000"
             data-testid="img-hero-banner"
           />
@@ -565,7 +565,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-700 text-sm italic mb-4">
-                "CleanPods Pro has completely transformed my laundry routine!
+                "WelvetWash has completely transformed my laundry routine!
                 The 5-in-1 technology is incredible - my clothes come out
                 cleaner, smell amazing, and colors stay vibrant wash after
                 wash."
@@ -598,7 +598,7 @@ export default function Home() {
               </div>
               <p className="text-gray-700 text-sm italic mb-4">
                 "As a laundromat owner, I needed something reliable and
-                effective. CleanPods Pro delivers consistent results for my
+                effective. WelvetWash delivers consistent results for my
                 machines. My customers love the long-lasting fragrance!"
               </p>
               <div className="flex items-center">
@@ -626,7 +626,7 @@ export default function Home() {
               </div>
               <p className="text-gray-700 text-sm italic mb-4">
                 "I was skeptical about trying new laundry products, but
-                CleanPods Pro exceeded all expectations. The convenience,
+                WelvetWash exceeded all expectations. The convenience,
                 effectiveness, and eco-friendly formula make it a perfect choice
                 for my family."
               </p>
@@ -666,7 +666,7 @@ export default function Home() {
               <p className="text-gray-600 mb-8">Complete product details and specifications</p>
               <a 
                 href="/brochures/english-brochure.pdf" 
-                download="CleanPods-Pro-English-Brochure.pdf"
+                download="WelvetWash-English-Brochure.pdf"
                 className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 data-testid="button-download-english"
               >
@@ -686,7 +686,7 @@ export default function Home() {
               <p className="text-gray-600 mb-8">Gujarati language product information</p>
               <a 
                 href="/brochures/gujarati-brochure.pdf" 
-                download="CleanPods-Pro-Gujarati-Brochure.pdf"
+                download="WelvetWash-Gujarati-Brochure.pdf"
                 className="inline-flex items-center bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-full font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
                 data-testid="button-download-gujarati"
               >
@@ -706,7 +706,7 @@ export default function Home() {
           </h2>
           <p className="text-xl text-blue-100 mb-8 leading-relaxed">
             Join thousands of satisfied customers and experience the future of
-            laundry care with CleanPods Pro's revolutionary 5-in-1 technology.
+            laundry care with WelvetWash's revolutionary 5-in-1 technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
             <Link href="/contact">

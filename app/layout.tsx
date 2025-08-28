@@ -4,8 +4,8 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'CleanPods Pro - Premium Laundry Pod Solutions',
-  description: 'Revolutionary 5-in-1 and 7-in-1 laundry pod technology with advanced cleaning power, anti-bacterial protection, and eco-friendly design.',
+  title: 'WelvetWash - Premium Laundry Pod Solutions',
+  description: 'WelvetWash offers revolutionary 5-in-1 and 7-in-1 laundry pod technology with advanced cleaning power, anti-bacterial protection, and eco-friendly design.',
   keywords: 'laundry pods, detergent, cleaning, eco-friendly, anti-bacterial, premium quality',
 }
 

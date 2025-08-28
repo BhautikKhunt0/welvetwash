@@ -1,8 +1,8 @@
-# CleanPods Pro - 5-in-1 Laundry Pod Company Website
+# WelvetWash - 5-in-1 Laundry Pod Company Website
 
 ## Overview
 
-CleanPods Pro is a modern full-stack web application for a laundry pod company featuring a comprehensive marketing website with advanced quote request functionality. The application showcases the company's revolutionary 5-in-1 compartmentalized laundry pod technology through multiple creative sections, customer testimonials, environmental impact highlights, and detailed product information. Built with React, TypeScript, and Express.js, it provides a premium business presence with smooth animations, modern UI design, and professional user experience focused on product presentation and lead generation.
+WelvetWash is a modern full-stack web application for a laundry pod company featuring a comprehensive marketing website with advanced quote request functionality. The application showcases the company's revolutionary 5-in-1 compartmentalized laundry pod technology through multiple creative sections, customer testimonials, environmental impact highlights, and detailed product information. Built with React, TypeScript, and Express.js, it provides a premium business presence with smooth animations, modern UI design, and professional user experience focused on product presentation and lead generation.
 
 ## User Preferences
 

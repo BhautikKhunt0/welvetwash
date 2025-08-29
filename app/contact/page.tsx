@@ -32,7 +32,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email Us</h3>
-                    <p className="text-gray-600">support@welvetwash.com</p>
+                    <a 
+                      href="mailto:support@welvetwash.com" 
+                      className="text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+                      data-testid="link-email"
+                    >
+                      support@welvetwash.com
+                    </a>
                   </div>
                 </div>
 
@@ -42,7 +48,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Call Us</h3>
-                    <p className="text-gray-600">+91 99743 98064</p>
+                    <a 
+                      href="tel:+919974398064" 
+                      className="text-green-600 hover:text-green-700 hover:underline transition-colors"
+                      data-testid="link-phone"
+                    >
+                      +91 99743 98064
+                    </a>
                   </div>
                 </div>
 
@@ -52,8 +64,16 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Visit Us</h3>
-                    <p className="text-gray-600">Velocity Enterprise</p>
-                    <p className="text-gray-600">Ahmedabad, Gujarat, India</p>
+                    <a 
+                      href="https://share.google/kQZYgKitHA271JklK" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-purple-600 hover:text-purple-700 hover:underline transition-colors"
+                      data-testid="link-maps"
+                    >
+                      <p className="text-purple-600 hover:text-purple-700">Velocity Enterprise</p>
+                      <p className="text-purple-600 hover:text-purple-700">Ahmedabad, Gujarat, India</p>
+                    </a>
                   </div>
                 </div>
 

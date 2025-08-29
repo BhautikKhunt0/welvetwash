@@ -112,7 +112,7 @@ export default function Navigation() {
               <img 
                 src="/welvet-logo.png" 
                 alt="WelvetWash Logo" 
-                className="h-12 w-auto max-w-[180px] object-contain group-hover:scale-105 transition-transform duration-200"
+                className="h-40 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
               />
             </Link>
             

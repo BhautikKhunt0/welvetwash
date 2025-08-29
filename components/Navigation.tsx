@@ -105,25 +105,15 @@ export default function Navigation() {
             {/* Logo Section */}
             <Link 
               href="/" 
-              className="flex items-center space-x-3 group" 
+              className="flex items-center group" 
               data-testid="link-home"
               onClick={closeMobileMenu}
             >
-              <div className="relative">
-                <img 
-                  src="/welvet-logo.png" 
-                  alt="WelvetWash Logo" 
-                  className="w-10 h-10 object-contain rounded-lg shadow-md group-hover:shadow-lg transition-shadow duration-200"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                  WelvetWash
-                </span>
-                <span className="text-xs text-gray-500 hidden sm:block">
-                  Professional Cleaning
-                </span>
-              </div>
+              <img 
+                src="/welvet-logo.png" 
+                alt="WelvetWash Logo" 
+                className="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+              />
             </Link>
             
             {/* Desktop Navigation */}

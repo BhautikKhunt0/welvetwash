@@ -819,6 +819,9 @@ body{
 .h-svh{
   height: 100svh;
 }
+.h-14{
+  height: 3.5rem;
+}
 .max-h-0{
   max-height: 0px;
 }

@@ -15,16 +15,12 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6 group">
+            <div className="mb-6 group">
               <img 
                 src="/welvet-logo.png" 
                 alt="WelvetWash Logo" 
-                className="w-12 h-12 object-contain rounded-xl shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300"
+                className="h-14 w-auto object-contain group-hover:scale-105 transition-all duration-300"
               />
-              <div>
-                <h3 className="text-xl font-bold">WelvetWash</h3>
-                <p className="text-sm text-blue-200">Premium Laundry Care</p>
-              </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Revolutionizing laundry care with our innovative compartmentalized technology. 

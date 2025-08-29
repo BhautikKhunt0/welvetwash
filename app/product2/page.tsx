@@ -107,7 +107,7 @@ export default function Product2() {
             <div className="space-y-8">
               <div>
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                  5 in 1 Hot sale Soften Clothes Deep Clean Anti-Bacterial Color protection custom fragrance Laundry Detergent Pods for Sensitive Skin
+                  5 in 1 Deep Clean Best seller Fragrance flowers OEM package Liquid Capsule
                 </h2>
                 <p className="text-xl text-teal-600 font-semibold mb-8">Premium Collection</p>
               </div>

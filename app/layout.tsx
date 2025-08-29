@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { MessageCircle } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 
 export const metadata: Metadata = {
   title: 'WelvetWash - Premium Laundry Pod Solutions',
@@ -33,7 +33,7 @@ export default function RootLayout({
           data-testid="whatsapp-button"
           title="Chat with us on WhatsApp"
         >
-          <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+          <FaWhatsapp className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
           <div className="absolute -top-2 -left-2 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
           
           {/* Tooltip */}

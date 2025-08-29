@@ -34,7 +34,7 @@ export default function Contact() {
                     <h3 className="font-semibold text-gray-900 mb-1">Email Us</h3>
                     <a 
                       href="mailto:support@welvetwash.com" 
-                      className="text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+                      className="text-blue-600 hover:text-blue-700 transition-colors"
                       data-testid="link-email"
                     >
                       support@welvetwash.com
@@ -50,7 +50,7 @@ export default function Contact() {
                     <h3 className="font-semibold text-gray-900 mb-1">Call Us</h3>
                     <a 
                       href="tel:+919974398064" 
-                      className="text-green-600 hover:text-green-700 hover:underline transition-colors"
+                      className="text-green-600 hover:text-green-700 transition-colors"
                       data-testid="link-phone"
                     >
                       +91 99743 98064
@@ -68,7 +68,7 @@ export default function Contact() {
                       href="https://share.google/kQZYgKitHA271JklK" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-purple-600 hover:text-purple-700 hover:underline transition-colors"
+                      className="text-purple-600 hover:text-purple-700 transition-colors"
                       data-testid="link-maps"
                     >
                       <p className="text-purple-600 hover:text-purple-700">Velocity Enterprise</p>

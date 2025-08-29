@@ -289,7 +289,7 @@ export default function Home() {
               <div className="text-center">
                 <div className="relative mx-auto mb-8 w-80 h-80 overflow-hidden rounded-2xl bg-white shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
+                    src="/product-5in1.png" 
                     alt="5-in-1 Multi-Function Laundry Pods"
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     data-testid="img-product-5in1"
@@ -323,8 +323,8 @@ export default function Home() {
               <div className="text-center">
                 <div className="relative mx-auto mb-8 w-80 h-80 overflow-hidden rounded-2xl bg-white shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
-                    alt="7-in-1 Premium Laundry Pods"
+                    src="/product-laundry.png" 
+                    alt="5 in 1 Deep Clean Premium Laundry Pods"
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     data-testid="img-product-7in1"
                   />

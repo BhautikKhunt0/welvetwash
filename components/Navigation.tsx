@@ -110,10 +110,11 @@ export default function Navigation() {
               onClick={closeMobileMenu}
             >
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow duration-200">
-                  <Building className="w-6 h-6 text-white" />
-                </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
+                <img 
+                  src="/welvet-logo.png" 
+                  alt="WelvetWash Logo" 
+                  className="w-10 h-10 object-contain rounded-lg shadow-md group-hover:shadow-lg transition-shadow duration-200"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">

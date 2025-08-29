@@ -16,10 +16,11 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6 group">
-              <div className="relative w-12 h-12 bg-gradient-to-r from-brand-blue via-brand-sky to-brand-cyan rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
-                <Sparkles className="text-white transition-transform duration-300 group-hover:rotate-12" />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
-              </div>
+              <img 
+                src="/welvet-logo.png" 
+                alt="WelvetWash Logo" 
+                className="w-12 h-12 object-contain rounded-xl shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300"
+              />
               <div>
                 <h3 className="text-xl font-bold">WelvetWash</h3>
                 <p className="text-sm text-blue-200">Premium Laundry Care</p>

@@ -35,7 +35,11 @@ export default function Home() {
     { type: "video", src: "/banner-1.mp4", alt: "WelvetWash Video Banner" },
     { type: "image", src: "/banner-2.png", alt: "WelvetWash Water Splash" },
     { type: "image", src: "/banner-3.png", alt: "WelvetWash Laundry Capsules" },
-    { type: "image", src: "/banner-4.png", alt: "WelvetWash Gujarati Brochure" },
+    {
+      type: "image",
+      src: "/banner-4.png",
+      alt: "WelvetWash Gujarati Brochure",
+    },
   ];
 
   useEffect(() => {
@@ -138,9 +142,9 @@ export default function Home() {
                 Explore Products
               </Button>
             </Link>
-            <a 
-              href="https://wa.me/919725550820?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?" 
-              target="_blank" 
+            <a
+              href="https://wa.me/919725550820?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?"
+              target="_blank"
               rel="noopener noreferrer"
             >
               <Button
@@ -279,8 +283,12 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Premium Product Line</h2>
-            <p className="text-xl text-gray-600">Advanced Laundry Solutions for Every Need</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Our Premium Product Line
+            </h2>
+            <p className="text-xl text-gray-600">
+              Advanced Laundry Solutions for Every Need
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -288,8 +296,8 @@ export default function Home() {
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="text-center">
                 <div className="relative mx-auto mb-8 w-80 h-80 overflow-hidden rounded-2xl bg-white shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
+                  <img
+                    src="/welvet-wash-5in1-pods.png"
                     alt="5-in-1 Multi-Function Laundry Pods"
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     data-testid="img-product-5in1"
@@ -298,21 +306,29 @@ export default function Home() {
                     Best Seller
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="text-product-name-5in1">
+                <h3
+                  className="text-2xl font-bold text-gray-900 mb-4"
+                  data-testid="text-product-name-5in1"
+                >
                   5-in-1 Multi-Function Laundry Pods
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Premium detergent with anti-bacterial protection, fabric softening, color guard, 
-                  and long-lasting fragrance technology in one convenient pod.
+                  Premium detergent with anti-bacterial protection, fabric
+                  softening, color guard, and long-lasting fragrance technology
+                  in one convenient pod.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <div className="flex items-center bg-blue-100 px-3 py-2 rounded-full">
                     <Shield className="w-4 h-4 text-blue-600 mr-2" />
-                    <span className="text-sm font-medium text-blue-800">99.9% Anti-Bacterial</span>
+                    <span className="text-sm font-medium text-blue-800">
+                      99.9% Anti-Bacterial
+                    </span>
                   </div>
                   <div className="flex items-center bg-green-100 px-3 py-2 rounded-full">
                     <Leaf className="w-4 h-4 text-green-600 mr-2" />
-                    <span className="text-sm font-medium text-green-800">Eco-Friendly</span>
+                    <span className="text-sm font-medium text-green-800">
+                      Eco-Friendly
+                    </span>
                   </div>
                 </div>
               </div>
@@ -322,8 +338,8 @@ export default function Home() {
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="text-center">
                 <div className="relative mx-auto mb-8 w-80 h-80 overflow-hidden rounded-2xl bg-white shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
+                  <img
+                    src="/welvet-wash-usage-demo.png"
                     alt="5 in 1 Deep Clean Premium Laundry Pods"
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     data-testid="img-product-7in1"
@@ -332,21 +348,30 @@ export default function Home() {
                     Premium
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="text-product-name-7in1">
-                  5 in 1 Deep Clean Best seller Fragrance flowers OEM package Liquid Capsule
+                <h3
+                  className="text-2xl font-bold text-gray-900 mb-4"
+                  data-testid="text-product-name-7in1"
+                >
+                  5 in 1 Deep Clean Best seller Fragrance flowers OEM package
+                  Liquid Capsule
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Ultimate cleaning solution with stain removal, whitening, brightening, 
-                  plus all the benefits of our 5-in-1 formula for professional results.
+                  Ultimate cleaning solution with stain removal, whitening,
+                  brightening, plus all the benefits of our 5-in-1 formula for
+                  professional results.
                 </p>
                 <div className="flex justify-center space-x-4">
                   <div className="flex items-center bg-purple-100 px-3 py-2 rounded-full">
                     <Zap className="w-4 h-4 text-purple-600 mr-2" />
-                    <span className="text-sm font-medium text-purple-800">Stain Fighter</span>
+                    <span className="text-sm font-medium text-purple-800">
+                      Stain Fighter
+                    </span>
                   </div>
                   <div className="flex items-center bg-pink-100 px-3 py-2 rounded-full">
                     <TrendingUp className="w-4 h-4 text-pink-600 mr-2" />
-                    <span className="text-sm font-medium text-pink-800">Color Boost</span>
+                    <span className="text-sm font-medium text-pink-800">
+                      Color Boost
+                    </span>
                   </div>
                 </div>
               </div>
@@ -584,10 +609,9 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-gray-700 text-sm italic mb-4">
-                "WelvetWash has completely transformed my laundry routine!
-                The 5-in-1 technology is incredible - my clothes come out
-                cleaner, smell amazing, and colors stay vibrant wash after
-                wash."
+                "WelvetWash has completely transformed my laundry routine! The
+                5-in-1 technology is incredible - my clothes come out cleaner,
+                smell amazing, and colors stay vibrant wash after wash."
               </p>
               <div className="flex items-center">
                 <div
@@ -669,8 +693,12 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-r from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Product Brochures</h2>
-            <p className="text-xl text-gray-600">Download detailed information about our premium laundry solutions</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Product Brochures
+            </h2>
+            <p className="text-xl text-gray-600">
+              Download detailed information about our premium laundry solutions
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -679,12 +707,17 @@ export default function Home() {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="text-brochure-english">
+              <h3
+                className="text-2xl font-bold text-gray-900 mb-4"
+                data-testid="text-brochure-english"
+              >
                 English Brochure
               </h3>
-              <p className="text-gray-600 mb-8">Complete product details and specifications</p>
-              <a 
-                href="/brochures/english-brochure.pdf" 
+              <p className="text-gray-600 mb-8">
+                Complete product details and specifications
+              </p>
+              <a
+                href="/brochures/english-brochure.pdf"
                 download="WelvetWash-English-Brochure.pdf"
                 className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 data-testid="button-download-english"
@@ -699,12 +732,17 @@ export default function Home() {
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Leaf className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="text-brochure-gujarati">
+              <h3
+                className="text-2xl font-bold text-gray-900 mb-4"
+                data-testid="text-brochure-gujarati"
+              >
                 ગુજરાતી બ્રોશર
               </h3>
-              <p className="text-gray-600 mb-8">Gujarati language product information</p>
-              <a 
-                href="/brochures/gujarati-brochure.pdf" 
+              <p className="text-gray-600 mb-8">
+                Gujarati language product information
+              </p>
+              <a
+                href="/brochures/gujarati-brochure.pdf"
                 download="WelvetWash-Gujarati-Brochure.pdf"
                 className="inline-flex items-center bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-full font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
                 data-testid="button-download-gujarati"

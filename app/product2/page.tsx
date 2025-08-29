@@ -55,7 +55,7 @@ export default function Product2() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">5-in-1 Deep Clean Best Seller</h1>
           <p className="text-xl text-cyan-100 max-w-3xl mx-auto mb-8">
-            Let's Work on Your Next Clothes & Personal Care Project - 5 in 1 Hot sale Soften Clothes Deep Clean Anti-Bacterial Color protection custom fragrance Laundry Detergent Pods for Sensitive Skin
+            Let's Work on Your Next Clothes & Personal Care Project - 5 in 1 Deep Clean Best seller Fragrance flowers OEM package Liquid Capsule
           </p>
           <div className="inline-block bg-white/20 px-6 py-3 rounded-full backdrop-blur-md">
             <span className="text-lg font-semibold">North Island Premium Quality</span>

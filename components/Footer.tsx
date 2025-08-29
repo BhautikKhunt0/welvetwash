@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Sparkles, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Leaf, ArrowUp } from "lucide-react";
+import { Sparkles, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Leaf, ArrowUp } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -30,16 +30,13 @@ export default function Footer() {
               99% cleaning efficiency, long-lasting fragrance, and complete color protection.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors duration-300 group" data-testid="social-facebook">
+              <a href="https://www.facebook.com/profile.php?id=61577355719076" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-blue transition-colors duration-300 group" data-testid="social-facebook" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-sky transition-colors duration-300 group" data-testid="social-twitter">
-                <Twitter className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-500 transition-colors duration-300 group" data-testid="social-instagram">
+              <a href="https://www.instagram.com/welvetwash/" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-500 transition-colors duration-300 group" data-testid="social-instagram" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300 group" data-testid="social-linkedin">
+              <a href="https://www.linkedin.com/company/welvet-wash/" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-300 group" data-testid="social-linkedin" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
               </a>
             </div>

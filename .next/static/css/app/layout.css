@@ -2824,6 +2824,11 @@ body{
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.hover\:shadow-green-500\/25:hover{
+  --tw-shadow-color: rgb(34 197 94 / 0.25);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .hover\:after\:bg-sidebar-border:hover::after{
   content: var(--tw-content);
   background-color: var(--sidebar-border);

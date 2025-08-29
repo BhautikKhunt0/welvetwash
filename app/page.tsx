@@ -25,6 +25,7 @@ import {
   Package,
   Download,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -137,17 +138,20 @@ export default function Home() {
                 Explore Products
               </Button>
             </Link>
-            <Link href="/contact">
+            <a 
+              href="https://wa.me/919725550820?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               <Button
                 size="lg"
-                variant="outline"
-                className="w-full sm:w-auto border-2 sm:border-3 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white px-8 sm:px-10 py-4 sm:py-6 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105"
+                className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-8 sm:px-10 py-4 sm:py-6 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg shadow-xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-105 border-0"
                 data-testid="button-get-quote-hero"
               >
-                <Zap className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
+                <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                 Get Quote
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

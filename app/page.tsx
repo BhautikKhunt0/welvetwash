@@ -30,35 +30,50 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const heroImages = [
-    "https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
-    "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
-    "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
-    "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+  const banners = [
+    { type: "video", src: "/banner-1.mp4", alt: "WelvetWash Video Banner" },
+    { type: "image", src: "/banner-2.png", alt: "WelvetWash Water Splash" },
+    { type: "image", src: "/banner-3.png", alt: "WelvetWash Laundry Capsules" },
+    { type: "image", src: "/banner-4.png", alt: "WelvetWash Gujarati Brochure" },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex === heroImages.length - 1 ? 0 : prevIndex + 1,
+        prevIndex === banners.length - 1 ? 0 : prevIndex + 1,
       );
-    }, 4000); // Change image every 4 seconds
+    }, 5000); // Change banner every 5 seconds
 
     return () => clearInterval(interval);
-  }, [heroImages.length]);
+  }, [banners.length]);
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] overflow-hidden">
-          {/* Hero Banner Image Slideshow */}
-          <img
-            src={heroImages[currentImageIndex]}
-            alt="WelvetWash - Revolutionary Laundry Experience"
-            className="w-full h-full object-cover transition-opacity duration-1000"
-            data-testid="img-hero-banner"
-          />
+          {/* Hero Banner Slideshow */}
+          {banners[currentImageIndex].type === "video" ? (
+            <video
+              src={banners[currentImageIndex].src}
+              className="w-full h-full object-cover transition-opacity duration-1000"
+              data-testid="video-hero-banner"
+              autoPlay
+              muted
+              loop
+              playsInline
+              onContextMenu={() => false}
+              controlsList="nodownload nofullscreen noremoteplayback"
+              disablePictureInPicture
+            />
+          ) : (
+            <img
+              src={banners[currentImageIndex].src}
+              alt={banners[currentImageIndex].alt}
+              className="w-full h-full object-cover transition-opacity duration-1000"
+              data-testid="img-hero-banner"
+            />
+          )}
 
           {/* Light Gradient Overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
@@ -78,7 +93,7 @@ export default function Home() {
           {/* Navigation Dots */}
           <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 flex justify-center">
             <div className="flex space-x-3">
-              {heroImages.map((_, index) => (
+              {banners.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentImageIndex(index)}
@@ -88,7 +103,7 @@ export default function Home() {
                       : "bg-white/50 hover:bg-white/70"
                   }`}
                   data-testid={`dot-${index}`}
-                  aria-label={`Switch to image ${index + 1}`}
+                  aria-label={`Switch to banner ${index + 1}`}
                 />
               ))}
             </div>

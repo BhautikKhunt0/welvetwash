@@ -59,8 +59,8 @@ export default function Navigation() {
   ];
 
   const productDropdownItems = [
-    { path: "/products", label: "Product 1", desc: "5-in-1 Revolutionary Technology" },
-    { path: "/product2", label: "Product 2", desc: "7-in-1 Premium Formula" },
+    { path: "/products", label: "POD 1", desc: "5 in 1 POD" },
+    { path: "/product2", label: "POD 2", desc: "5 in 1 Deep Clean" },
   ];
 
   const isActive = (path: string) => {

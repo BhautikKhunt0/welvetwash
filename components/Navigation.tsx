@@ -162,7 +162,7 @@ export default function Navigation() {
                         <Link
                           key={dropItem.path}
                           href={dropItem.path}
-                          className="flex items-start space-x-3 px-4 py-3 hover:bg-gray-50 transition-colors"
+                          className="flex items-start space-x-3 px-4 py-3 mx-2 rounded-lg hover:bg-gray-50 transition-colors"
                           data-testid={`dropdown-${dropItem.label.toLowerCase().replace(' ', '-')}`}
                         >
                           <Package className="w-5 h-5 text-blue-600 mt-0.5" />

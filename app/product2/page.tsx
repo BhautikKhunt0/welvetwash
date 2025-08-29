@@ -10,15 +10,9 @@ export default function Product2() {
   const galleryImages = [
     {
       id: 1,
-      src: "/product-5in1.png",
-      thumb: "/product-5in1.png",
-      alt: "5-in-1 Multi-Function Laundry Pods"
-    },
-    {
-      id: 2,
-      src: "/product-laundry.png",
-      thumb: "/product-laundry.png",
-      alt: "WelvetWash Premium Laundry Experience"
+      src: "/welvet-wash-5in1-pods.png",
+      thumb: "/welvet-wash-5in1-pods.png",
+      alt: "WelvetWash 5-in-1 Detergent Pods"
     },
     {
       id: 3,

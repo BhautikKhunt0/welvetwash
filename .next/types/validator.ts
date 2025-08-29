@@ -36,33 +36,33 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 }
 
 
-// Validate ../../app/about/page.tsx
+// Validate ..\..\app\about\page.tsx
 {
-  const handler = {} as typeof import("../../app/about/page.js")
+  const handler = {} as typeof import("..\\..\\app\\about\\page.js")
   handler satisfies AppPageConfig<"/about">
 }
 
-// Validate ../../app/contact/page.tsx
+// Validate ..\..\app\contact\page.tsx
 {
-  const handler = {} as typeof import("../../app/contact/page.js")
+  const handler = {} as typeof import("..\\..\\app\\contact\\page.js")
   handler satisfies AppPageConfig<"/contact">
 }
 
-// Validate ../../app/page.tsx
+// Validate ..\..\app\page.tsx
 {
-  const handler = {} as typeof import("../../app/page.js")
+  const handler = {} as typeof import("..\\..\\app\\page.js")
   handler satisfies AppPageConfig<"/">
 }
 
-// Validate ../../app/product2/page.tsx
+// Validate ..\..\app\product2\page.tsx
 {
-  const handler = {} as typeof import("../../app/product2/page.js")
+  const handler = {} as typeof import("..\\..\\app\\product2\\page.js")
   handler satisfies AppPageConfig<"/product2">
 }
 
-// Validate ../../app/products/page.tsx
+// Validate ..\..\app\products\page.tsx
 {
-  const handler = {} as typeof import("../../app/products/page.js")
+  const handler = {} as typeof import("..\\..\\app\\products\\page.js")
   handler satisfies AppPageConfig<"/products">
 }
 
@@ -72,8 +72,8 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 
 
 
-// Validate ../../app/layout.tsx
+// Validate ..\..\app\layout.tsx
 {
-  const handler = {} as typeof import("../../app/layout.js")
+  const handler = {} as typeof import("..\\..\\app\\layout.js")
   handler satisfies LayoutConfig<"/">
 }

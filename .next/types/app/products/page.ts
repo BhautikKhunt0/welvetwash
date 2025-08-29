@@ -1,4 +1,4 @@
-// File: /home/runner/workspace/app/products/page.tsx
+// File: D:\PodPower\PodPower\app\products\page.tsx
 import * as entry from '../../../../app/products/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -27,37 +27,33 @@ export default function Product2() {
   const galleryImages = [
     {
       id: 1,
-      src: "/welvet-wash-5in1-pods.png",
-      thumb: "/welvet-wash-5in1-pods.png",
-      alt: "WelvetWash 5-in-1 Detergent Pods",
+      src: "/product2/features.png",
+      thumb: "/product2/features.png",
+      alt: "5-in-1 Detergent Pod Features",
+    },
+    {
+      id: 2,
+      src: "/product2/usage-demo.png",
+      thumb: "/product2/usage-demo.png",
+      alt: "Usage Demonstration with Laundry",
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
-      thumb:
-        "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
-      alt: "Premium multi-chamber technology",
+      src: "/product2/antibacterial.png",
+      thumb: "/product2/antibacterial.png",
+      alt: "99% Mite Removal & Antibacterial Protection",
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
-      thumb:
-        "https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
-      alt: "Premium package information",
+      src: "/product2/stain-removal.png",
+      thumb: "/product2/stain-removal.png",
+      alt: "Stain Removal Before and After",
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
-      thumb:
-        "https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
-      alt: "Premium usage demonstration",
-    },
-    {
-      id: 6,
-      src: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
-      thumb:
-        "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
-      alt: "Premium clean results",
+      src: "/product2/package.png",
+      thumb: "/product2/package.png",
+      alt: "WelvetWash Product Package with Flowers",
     },
   ];
 

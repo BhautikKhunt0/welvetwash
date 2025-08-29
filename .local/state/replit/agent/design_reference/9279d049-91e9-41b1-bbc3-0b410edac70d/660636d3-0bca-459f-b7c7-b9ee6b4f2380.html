@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanPods Pro - 5-in-1 Laundry Pods</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#2563EB',
+                        'brand-sky': '#0EA5E9',
+                        'brand-cyan': '#06B6D4'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .page-section {
+            display: none;
+        }
+        .page-section.active {
+            display: block;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 50%, #06B6D4 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-inter bg-slate-50 smooth-scroll">
+
+    <!-- @COMPONENT: Navigation [responsive navigation with smooth page transitions] -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-r from-brand-blue to-brand-cyan rounded-lg flex items-center justify-center">
+                        <i class="fas fa-leaf text-white text-xl"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">CleanPods Pro</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <button onclick="showPage('home')" class="nav-link text-gray-700 hover:text-brand-blue transition-colors font-medium">Home</button>
+                    <button onclick="showPage('products')" class="nav-link text-gray-700 hover:text-brand-blue transition-colors font-medium">Products</button>
+                    <button onclick="showPage('about')" class="nav-link text-gray-700 hover:text-brand-blue transition-colors font-medium">About</button>
+                    <button onclick="showPage('contact')" class="nav-link text-gray-700 hover:text-brand-blue transition-colors font-medium">Contact</button>
+                </div>
+
+                <button onclick="showPage('contact')" class="bg-brand-blue text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors font-medium">
+                    Get Quote
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <button onclick="showPage('home')" class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Home</button>
+                <button onclick="showPage('products')" class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Products</button>
+                <button onclick="showPage('about')" class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">About</button>
+                <button onclick="showPage('contact')" class="block w-full text-left px-3 py-2 text-gray-700 hover:bg-gray-100 rounded">Contact</button>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: HomePage [landing page with hero and features] -->
+    <div id="home-page" class="page-section active">
+        <!-- Hero Section -->
+        <section class="pt-16 min-h-screen gradient-bg flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-white">
+                        <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                            5-in-1 
+                            <span class="text-cyan-300">Revolutionary</span>
+                            Laundry Pods
+                        </h1>
+                        <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                            Experience powerful cleaning with our compartmentalized laundry pods. 99% cleaning efficiency, 
+                            long-lasting fragrance, and complete color protection in one innovative solution.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                            <button onclick="showPage('products')" class="bg-white text-brand-blue px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                                Explore Products
+                            </button>
+                            <button onclick="showPage('contact')" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-blue transition-all">
+                                Get Quote
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-3 gap-6 text-center">
+                            <div>
+                                <div class="text-3xl font-bold">99%</div>
+                                <div class="text-blue-200">Cleaning Efficiency</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold">5-in-1</div>
+                                <div class="text-blue-200">Comprehensive Care</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold">15G</div>
+                                <div class="text-blue-200">Power Load</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <!-- Modern laundry room with pods -->
+                        <img src="https://pixabay.com/get/g8e3b0a75f811d9953e629eea48b01030280ba03c0ab99aa97af33d721dd22a786d0864e780d605a76732af91ae7991e63eba44265df9361079e66d81113157ea_1280.jpg" alt="Modern laundry room setup" class="rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                            <div class="text-2xl font-bold text-brand-blue mb-1">8-12</div>
+                            <div class="text-gray-600 text-sm">Pieces of Clothing</div>
+                            <div class="text-xs text-gray-500">per 15g pod</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">5-in-1 Comprehensive Efficacy</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Each pod contains compartmentalized storage with independent functions to maximize washing and care effects
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">99% Anti-bacterial</h3>
+                        <p class="text-gray-600">Advanced antimicrobial agents eliminate 99% of bacteria while protecting fabric integrity.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-palette text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Color Protection</h3>
+                        <p class="text-gray-600">Specialized enzymes and color-lock technology keep your clothes vibrant wash after wash.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-seedling text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Long-lasting Fragrance</h3>
+                        <p class="text-gray-600">Natural plant fragrances provide lasting freshness with every wash cycle.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-compress-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Low Sud Formulation</h3>
+                        <p class="text-gray-600">Perfect for both front and top load machines with efficient, low-foam cleaning.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-bug text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Mite Removal</h3>
+                        <p class="text-gray-600">Effective against house dust mites and staphylococcus aureus for healthier fabrics.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl card-hover">
+                        <div class="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-cogs text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Powerful Cleaning</h3>
+                        <p class="text-gray-600">70% active ingredient content with advanced surfactants and enzymes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section class="py-20 bg-gradient-to-r from-slate-100 to-blue-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <!-- Laundry pods packaging -->
+                        <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Premium laundry pods packaging" class="rounded-2xl shadow-lg w-full">
+                    </div>
+                    <div>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">Compact. Powerful. Effective.</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-ruler text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Compact Size</h4>
+                                    <p class="text-gray-600">6×6×1.5cm dimensions for easy storage and handling</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-brand-sky rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-weight text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">15G Power Load</h4>
+                                    <p class="text-gray-600">Perfect dosage for 8-12 pieces of clothing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-8 h-8 bg-brand-cyan rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-sync text-white text-sm"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Universal Compatibility</h4>
+                                    <p class="text-gray-600">Works with both front and top load washing machines</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <button onclick="showPage('contact')" class="bg-brand-blue text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-all transform hover:scale-105">
+                                Request Sample
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- @END_COMPONENT: HomePage -->
+
+    <!-- @COMPONENT: ProductsPage [detailed product information and specifications] -->
+    <div id="products-page" class="page-section">
+        <div class="pt-16">
+            <!-- Product Hero -->
+            <section class="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-5xl font-bold mb-6">Our Products</h1>
+                    <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                        Discover the science behind our revolutionary 5-in-1 laundry pod technology
+                    </p>
+                </div>
+            </section>
+
+            <!-- Product Details -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-16">
+                        <!-- Product Images -->
+                        <div class="space-y-6">
+                            <!-- Clean clothes hanging -->
+                            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Fresh clean clothes hanging on line" class="rounded-xl shadow-lg w-full">
+                            <!-- Product photography background -->
+                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" alt="Clean laundry setup with products" class="rounded-xl shadow-lg w-full">
+                        </div>
+
+                        <!-- Product Information -->
+                        <div>
+                            <h2 class="text-4xl font-bold text-gray-900 mb-8">CleanPods Pro 5-in-1</h2>
+                            
+                            <!-- Key Features -->
+                            <div class="mb-10">
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Key Features</h3>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-blue-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-brand-blue mb-1">99%</div>
+                                        <div class="text-sm text-gray-600">Cleaning Efficiency</div>
+                                    </div>
+                                    <div class="bg-green-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-green-600 mb-1">99%</div>
+                                        <div class="text-sm text-gray-600">Anti-bacterial</div>
+                                    </div>
+                                    <div class="bg-purple-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-purple-600 mb-1">15G</div>
+                                        <div class="text-sm text-gray-600">Power Load</div>
+                                    </div>
+                                    <div class="bg-cyan-50 p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-cyan-600 mb-1">70%</div>
+                                        <div class="text-sm text-gray-600">Active Content</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Specifications -->
+                            <div class="mb-10">
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Specifications</h3>
+                                <div class="space-y-4">
+                                    <div class="flex justify-between py-3 border-b border-gray-200">
+                                        <span class="font-medium text-gray-900">Dimensions</span>
+                                        <span class="text-gray-600">6×6×1.5cm</span>
+                                    </div>
+                                    <div class="flex justify-between py-3 border-b border-gray-200">
+                                        <span class="font-medium text-gray-900">Weight</span>
+                                        <span class="text-gray-600">15G per pod</span>
+                                    </div>
+                                    <div class="flex justify-between py-3 border-b border-gray-200">
+                                        <span class="font-medium text-gray-900">Coverage</span>
+                                        <span class="text-gray-600">8-12 pieces of clothing</span>
+                                    </div>
+                                    <div class="flex justify-between py-3 border-b border-gray-200">
+                                        <span class="font-medium text-gray-900">Compatibility</span>
+                                        <span class="text-gray-600">Front & Top Load</span>
+                                    </div>
+                                    <div class="flex justify-between py-3 border-b border-gray-200">
+                                        <span class="font-medium text-gray-900">Formulation</span>
+                                        <span class="text-gray-600">Low Sud</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ingredients -->
+                            <div class="mb-10">
+                                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Main Ingredients</h3>
+                                <div class="grid grid-cols-1 gap-3">
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span class="text-gray-700">Surfactants</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span class="text-gray-700">Dirt dispersing agents</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span class="text-gray-700">Enzymes</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span class="text-gray-700">Deodorizing and bactericidal agents</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span class="text-gray-700">Natural plant fragrances</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button onclick="showPage('contact')" class="w-full bg-brand-blue text-white py-4 rounded-full font-semibold hover:bg-blue-700 transition-all transform hover:scale-105">
+                                Get Quote Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Usage Instructions -->
+            <section class="py-20 bg-slate-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Usage Instructions</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Dosage Guidelines</h3>
+                            <div class="space-y-4">
+                                <div class="bg-white p-6 rounded-xl shadow-sm">
+                                    <div class="flex items-center space-x-4 mb-3">
+                                        <div class="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center">
+                                            <span class="text-white font-semibold">1</span>
+                                        </div>
+                                        <h4 class="font-semibold text-gray-900">Standard Load</h4>
+                                    </div>
+                                    <p class="text-gray-600 ml-14">Use 1 pod (15g) for 8-12 pieces of clothing</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl shadow-sm">
+                                    <div class="flex items-center space-x-4 mb-3">
+                                        <div class="w-10 h-10 bg-brand-sky rounded-full flex items-center justify-center">
+                                            <span class="text-white font-semibold">2</span>
+                                        </div>
+                                        <h4 class="font-semibold text-gray-900">Heavy Soiling</h4>
+                                    </div>
+                                    <p class="text-gray-600 ml-14">Adjust dosage according to the level of dirtiness</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-6">Important Notes</h3>
+                            <div class="space-y-4">
+                                <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-xl">
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-exclamation-triangle text-yellow-500 mt-1"></i>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-2">Wash Mode</h4>
+                                            <p class="text-gray-700">Do not use ultra-fast wash mode or pre-wash for less than 18 minutes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-xl">
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-thermometer-half text-blue-500 mt-1"></i>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-2">Storage</h4>
+                                            <p class="text-gray-700">Pay attention to moisture-proof and high-temperature storage when storing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Gallery -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Product Gallery</h2>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Modern laundry room -->
+                        <img src="https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Modern laundry room interior" class="rounded-xl shadow-lg card-hover">
+                        <!-- Laundry pods close-up -->
+                        <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Colorful laundry detergent pods" class="rounded-xl shadow-lg card-hover">
+                        <!-- Clean folded clothes -->
+                        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Neatly folded clean clothes" class="rounded-xl shadow-lg card-hover">
+                        <!-- Professional product background -->
+                        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Professional laundry care setup" class="rounded-xl shadow-lg card-hover">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: ProductsPage -->
+
+    <!-- @COMPONENT: AboutPage [company information and mission] -->
+    <div id="about-page" class="page-section">
+        <div class="pt-16">
+            <!-- About Hero -->
+            <section class="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-5xl font-bold mb-6">About CleanPods Pro</h1>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Revolutionizing laundry care through innovative compartmentalized technology
+                    </p>
+                </div>
+            </section>
+
+            <!-- Mission Section -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+                            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                                At CleanPods Pro, we believe that exceptional laundry care shouldn't come at the expense 
+                                of convenience or environmental responsibility. Our mission is to deliver cutting-edge 
+                                cleaning technology that makes every wash more effective, efficient, and eco-friendly.
+                            </p>
+                            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                                Through our innovative 5-in-1 compartmentalized storage system, we've created a laundry 
+                                solution that maximizes cleaning power while minimizing environmental impact. Each pod 
+                                represents years of research and development in cleaning chemistry and sustainable packaging.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check text-green-500 text-xl"></i>
+                                    <span class="text-gray-700">Advanced compartmentalized technology</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check text-green-500 text-xl"></i>
+                                    <span class="text-gray-700">99% cleaning and antibacterial efficiency</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check text-green-500 text-xl"></i>
+                                    <span class="text-gray-700">Natural plant-based fragrances</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check text-green-500 text-xl"></i>
+                                    <span class="text-gray-700">Universal machine compatibility</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- Modern laundry laboratory -->
+                            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Modern laboratory with laundry research" class="rounded-2xl shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values Section -->
+            <section class="py-20 bg-slate-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Our Values</h2>
+                    
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-flask text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Innovation</h3>
+                            <p class="text-gray-600">
+                                Continuously pushing the boundaries of cleaning technology through research and development 
+                                to deliver superior laundry solutions.
+                            </p>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-leaf text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Sustainability</h3>
+                            <p class="text-gray-600">
+                                Committed to environmental responsibility through eco-friendly formulations and 
+                                sustainable packaging solutions.
+                            </p>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-users text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4">Excellence</h3>
+                            <p class="text-gray-600">
+                                Delivering exceptional quality and performance in every product, ensuring customer 
+                                satisfaction and trust.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technology Section -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6">The Science Behind Our Success</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Our revolutionary compartmentalized storage system maximizes the effectiveness of each ingredient
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <!-- Clean laboratory setup -->
+                            <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Scientific laboratory with cleaning research" class="rounded-2xl shadow-lg">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-semibold text-gray-900 mb-8">Advanced Formulation Technology</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-atom text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Compartmentalized Storage</h4>
+                                        <p class="text-gray-600">Each function is independently stored to prevent premature activation and maximize effectiveness when needed.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-microscope text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-gray-900 mb-2">70% Active Ingredients</h4>
+                                        <p class="text-gray-600">Our concentrated formula delivers maximum cleaning power with minimal environmental impact.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-vial text-purple-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-gray-900 mb-2">Natural Plant Fragrances</h4>
+                                        <p class="text-gray-600">Carefully selected botanical extracts provide long-lasting freshness without harsh chemicals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="py-20 gradient-bg text-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-4xl font-bold mb-6">Ready to Experience the Difference?</h2>
+                    <p class="text-xl text-blue-100 mb-8">
+                        Join thousands of satisfied customers who have revolutionized their laundry routine with CleanPods Pro.
+                    </p>
+                    <button onclick="showPage('contact')" class="bg-white text-brand-blue px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105">
+                        Get Your Quote Today
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: AboutPage -->
+
+    <!-- @COMPONENT: ContactPage [contact form and company information] -->
+    <div id="contact-page" class="page-section">
+        <div class="pt-16">
+            <!-- Contact Hero -->
+            <section class="py-20 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-5xl font-bold mb-6">Get Your Quote</h1>
+                    <p class="text-xl text-cyan-100 max-w-3xl mx-auto">
+                        Ready to revolutionize your laundry experience? Contact us today for pricing and availability.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contact Form & Info -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-16">
+                        <!-- Contact Form -->
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-900 mb-8">Request a Quote</h2>
+                            <!-- @FUNCTIONALITY: Contact form should implement form validation and quote request processing -->
+                            <form class="space-y-6" data-implementation="Form validation and quote request processing">
+                                <div class="grid md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent" required data-bind="form.firstName">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent" required data-bind="form.lastName">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                    <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent" required data-bind="form.email">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                    <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent" data-bind="form.phone">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Company Name</label>
+                                    <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent" data-bind="form.company">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Quantity Needed</label>
+                                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent" data-bind="form.quantity">
+                                        <option value="">Select quantity range</option>
+                                        <option value="sample">Sample Pack (10-50 pods)</option>
+                                        <option value="small">Small Order (100-500 pods)</option>
+                                        <option value="medium">Medium Order (500-2,000 pods)</option>
+                                        <option value="large">Large Order (2,000+ pods)</option>
+                                        <option value="wholesale">Wholesale Inquiry</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                    <textarea rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent" placeholder="Tell us about your specific needs, preferred delivery timeline, or any questions you have about our products." data-bind="form.message"></textarea>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <input type="checkbox" id="terms" class="mt-1 text-brand-blue focus:ring-brand-blue border-gray-300 rounded" required>
+                                    <label for="terms" class="text-sm text-gray-600">
+                                        I agree to receive communications about CleanPods Pro products and services. 
+                                        You can unsubscribe at any time.
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-brand-blue text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105" data-event="click:handleSubmit">
+                                    Send Quote Request
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+                            
+                            <div class="space-y-8">
+                                <!-- Quick Response -->
+                                <div class="bg-blue-50 p-8 rounded-2xl">
+                                    <div class="flex items-center space-x-4 mb-4">
+                                        <div class="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center">
+                                            <i class="fas fa-clock text-white"></i>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-gray-900">Quick Response</h3>
+                                    </div>
+                                    <p class="text-gray-700 mb-4">We respond to all quote requests within 24 hours during business days.</p>
+                                    <div class="text-sm text-gray-600">
+                                        <p>Business Hours: Monday - Friday, 9:00 AM - 6:00 PM</p>
+                                    </div>
+                                </div>
+
+                                <!-- Sample Program -->
+                                <div class="bg-green-50 p-8 rounded-2xl">
+                                    <div class="flex items-center space-x-4 mb-4">
+                                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-gift text-white"></i>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-gray-900">Free Sample Program</h3>
+                                    </div>
+                                    <p class="text-gray-700 mb-4">
+                                        Try CleanPods Pro risk-free with our complimentary sample program. 
+                                        Perfect for testing compatibility with your washing machines and preferences.
+                                    </p>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• 5-pod sample pack included</li>
+                                        <li>• Usage instructions provided</li>
+                                        <li>• No commitment required</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Bulk Pricing -->
+                                <div class="bg-purple-50 p-8 rounded-2xl">
+                                    <div class="flex items-center space-x-4 mb-4">
+                                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                                            <i class="fas fa-chart-line text-white"></i>
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-gray-900">Volume Discounts</h3>
+                                    </div>
+                                    <p class="text-gray-700 mb-4">
+                                        Significant savings available for bulk orders. Perfect for businesses, 
+                                        laundromats, or group purchases.
+                                    </p>
+                                    <ul class="text-sm text-gray-600 space-y-1">
+                                        <li>• Tiered pricing structure</li>
+                                        <li>• Custom packaging available</li>
+                                        <li>• Flexible delivery schedules</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Contact Methods -->
+                                <div class="space-y-4">
+                                    <h3 class="text-xl font-semibold text-gray-900">Alternative Contact Methods</h3>
+                                    
+                                    <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                                        <i class="fas fa-envelope text-brand-blue text-xl"></i>
+                                        <div>
+                                            <div class="font-medium text-gray-900">Email</div>
+                                            <div class="text-gray-600">info@cleanpodspro.com</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                                        <i class="fas fa-phone text-brand-blue text-xl"></i>
+                                        <div>
+                                            <div class="font-medium text-gray-900">Phone</div>
+                                            <div class="text-gray-600">1-800-CLEANPOD</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+                                        <i class="fas fa-comments text-brand-blue text-xl"></i>
+                                        <div>
+                                            <div class="font-medium text-gray-900">Live Chat</div>
+                                            <div class="text-gray-600">Available on our website</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="py-20 bg-slate-50">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">What is the minimum order quantity?</h3>
+                            <p class="text-gray-600">
+                                We offer flexible ordering options starting from sample packs of 10 pods. 
+                                There's no minimum order requirement, making it perfect for individual users or large-scale operations.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">How long does shipping take?</h3>
+                            <p class="text-gray-600">
+                                Standard shipping takes 5-7 business days. Express shipping options are available. 
+                                Bulk orders may require additional processing time depending on quantity.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">Are the pods compatible with all washing machines?</h3>
+                            <p class="text-gray-600">
+                                Yes, our pods are designed for both front-load and top-load washing machines. 
+                                The low sud formulation ensures optimal performance across all machine types.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">What's your return policy?</h3>
+                            <p class="text-gray-600">
+                                We offer a 30-day satisfaction guarantee. If you're not completely satisfied with the cleaning performance, 
+                                we'll provide a full refund or replacement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: ContactPage -->
+
+    <!-- @COMPONENT: JavaScript [page navigation and interactivity] -->
+    <script>
+        (function() {
+            // Page navigation system
+            function showPage(pageId) {
+                // Hide all pages
+                const pages = document.querySelectorAll('.page-section');
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show selected page
+                const targetPage = document.getElementById(pageId + '-page');
+                if (targetPage) {
+                    targetPage.classList.add('active');
+                }
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Update active nav link
+                const navLinks = document.querySelectorAll('.nav-link');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-brand-blue');
+                    link.classList.add('text-gray-700');
+                });
+                
+                // Close mobile menu
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.add('hidden');
+            }
+            
+            // Mobile menu toggle
+            function toggleMobileMenu() {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            }
+            
+            // Form validation (placeholder for real implementation)
+            function handleSubmit(event) {
+                event.preventDefault();
+                
+                // TODO: Implement form validation and submission
+                // This should include:
+                // - Field validation
+                // - API call to submit form
+                // - Success/error handling
+                // - Loading states
+                
+                alert('Thank you for your quote request! We will contact you within 24 hours.');
+                
+                // Reset form
+                event.target.closest('form').reset();
+            }
+            
+            // Smooth scroll behavior for internal links
+            document.addEventListener('DOMContentLoaded', function() {
+                // Set up click handlers for buttons with onclick attributes
+                document.addEventListener('click', function(e) {
+                    if (e.target.getAttribute('onclick')) {
+                        const onclick = e.target.getAttribute('onclick');
+                        if (onclick.includes('showPage(')) {
+                            e.preventDefault();
+                            const pageId = onclick.match(/showPage\('(\w+)'\)/)[1];
+                            showPage(pageId);
+                        }
+                    }
+                });
+                
+                // Form submission handling
+                const forms = document.querySelectorAll('form');
+                forms.forEach(form => {
+                    form.addEventListener('submit', handleSubmit);
+                });
+            });
+            
+            // Expose functions to global scope for onclick handlers
+            window.showPage = showPage;
+            window.toggleMobileMenu = toggleMobileMenu;
+            window.handleSubmit = handleSubmit;
+        })();
+    </script>
+    <!-- @END_COMPONENT: JavaScript -->
+
+</body>
+</html>

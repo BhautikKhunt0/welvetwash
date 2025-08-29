@@ -15,6 +15,7 @@ import {
   ArrowRight,
   Building
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -181,16 +182,22 @@ export default function Navigation() {
             {/* Right Section */}
             <div className="flex items-center space-x-3">
               
-              {/* CTA Button */}
-              <Link href="/contact" data-testid="button-get-quote" className="hidden sm:block">
+              {/* WhatsApp CTA Button */}
+              <a 
+                href="https://wa.me/919725550820?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                data-testid="button-whatsapp-quote" 
+                className="hidden sm:block"
+              >
                 <Button 
                   size="sm" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-200"
+                  className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-200 flex items-center"
                 >
+                  <FaWhatsapp className="w-4 h-4 mr-2" />
                   Get Quote
-                  <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
-              </Link>
+              </a>
 
               {/* Mobile Menu Button */}
               <Button
@@ -270,14 +277,19 @@ export default function Navigation() {
                 </div>
               ))}
               
-              {/* Mobile CTA */}
+              {/* Mobile WhatsApp CTA */}
               <div className="pt-4 border-t border-gray-100">
-                <Link href="/contact" onClick={closeMobileMenu}>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium shadow-sm">
-                    <ArrowRight className="w-4 h-4 mr-2" />
+                <a 
+                  href="https://wa.me/919725550820?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={closeMobileMenu}
+                >
+                  <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 rounded-lg font-medium shadow-sm flex items-center justify-center">
+                    <FaWhatsapp className="w-4 h-4 mr-2" />
                     Get Your Quote
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

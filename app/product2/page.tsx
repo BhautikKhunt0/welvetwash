@@ -292,7 +292,7 @@ export default function Product2() {
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-testid="text-product-name-7in1">
-                  7-in-1 Premium Advanced Laundry Pods
+                  5 in 1 Deep Clean Best seller Fragrance flowers OEM package Liquid Capsule
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Ultimate cleaning solution with stain removal, whitening, brightening, 

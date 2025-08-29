@@ -10,15 +10,15 @@ export default function Product2() {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
-      thumb: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
-      alt: "Premium product package front view"
+      src: "/product-5in1.png",
+      thumb: "/product-5in1.png",
+      alt: "5-in-1 Multi-Function Laundry Pods"
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600",
-      thumb: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
-      alt: "Premium laundry pods collection"
+      src: "/product-laundry.png",
+      thumb: "/product-laundry.png",
+      alt: "WelvetWash Premium Laundry Experience"
     },
     {
       id: 3,

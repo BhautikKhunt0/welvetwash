@@ -59,7 +59,7 @@ export default function Navigation() {
   ];
 
   const productDropdownItems = [
-    { path: "/products", label: "POD 1", desc: "5 in 1 POD" },
+    { path: "/products", label: "POD 1", desc: "5 in 1 Laundry Pod" },
     { path: "/product2", label: "POD 2", desc: "5 in 1 Deep Clean" },
   ];
 

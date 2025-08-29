@@ -123,20 +123,38 @@ export default function Footer() {
               <div className="flex items-start space-x-3" data-testid="contact-address">
                 <MapPin className="w-5 h-5 text-brand-sky mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 text-sm">
+                  <a 
+                    href="https://share.google/kQZYgKitHA271JklK" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                    data-testid="footer-link-maps"
+                  >
                     Velocity Enterprise<br />
                     Ahmedabad, Gujarat<br />
                     India
-                  </p>
+                  </a>
                 </div>
               </div>
               <div className="flex items-center space-x-3" data-testid="contact-phone-footer">
                 <Phone className="w-5 h-5 text-brand-sky flex-shrink-0" />
-                <p className="text-gray-300 text-sm">+91 99743 98064</p>
+                <a 
+                  href="tel:+919974398064" 
+                  className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                  data-testid="footer-link-phone"
+                >
+                  +91 99743 98064
+                </a>
               </div>
               <div className="flex items-center space-x-3" data-testid="contact-email-footer">
                 <Mail className="w-5 h-5 text-brand-sky flex-shrink-0" />
-                <p className="text-gray-300 text-sm">support@welvetwash.com</p>
+                <a 
+                  href="mailto:support@welvetwash.com" 
+                  className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                  data-testid="footer-link-email"
+                >
+                  support@welvetwash.com
+                </a>
               </div>
             </div>
           </div>

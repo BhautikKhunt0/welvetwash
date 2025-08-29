@@ -19,7 +19,7 @@ export default function Footer() {
               <img 
                 src="/welvet-logo.png" 
                 alt="WelvetWash Logo" 
-                className="h-14 w-auto object-contain group-hover:scale-105 transition-all duration-300"
+                className="h-16 w-auto max-w-[200px] object-contain group-hover:scale-105 transition-all duration-300"
               />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">

@@ -142,26 +142,17 @@ export default function Products() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex justify-center">
                 <Link href="/contact">
                   <Button 
                     size="lg"
-                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105"
                     data-testid="button-get-quote-main"
                   >
                     <Package className="w-6 h-6 mr-3" />
                     Get Quote Now
                   </Button>
                 </Link>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="flex-1 border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-600 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
-                  data-testid="button-add-inquiry"
-                >
-                  <Heart className="w-6 h-6 mr-3" />
-                  Add to Inquiry
-                </Button>
               </div>
             </div>
           </div>

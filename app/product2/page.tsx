@@ -519,14 +519,6 @@ export default function Product2() {
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">
-                      Origin
-                    </td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">
-                      Guangzhou Guangdong Province, China
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-gray-50 transition-colors duration-200">
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">
                       Certificate
                     </td>
                     <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">
@@ -549,7 +541,7 @@ export default function Product2() {
           {/* Product Visual */}
           <div className="text-center mt-12 mb-16">
             <img
-              src="/laundry-pod.png"
+              src="/product2/antibacterial.png"
               alt="5-in-1 Multi-colored Laundry Pod with Blue, Green, and Pink Chambers"
               className="mx-auto rounded-2xl shadow-xl max-w-md w-full h-auto bg-white p-8"
               data-testid="img-product-visual"

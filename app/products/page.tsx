@@ -499,14 +499,6 @@ export default function Products() {
                   </tr>
                   <tr className="hover:bg-gray-50 transition-colors duration-200">
                     <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">
-                      Origin
-                    </td>
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">
-                      Guangzhou Guangdong Province, China
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-gray-50 transition-colors duration-200">
-                    <td className="px-4 sm:px-6 lg:px-8 py-4 font-semibold text-gray-900 text-sm sm:text-base whitespace-nowrap">
                       Certificate
                     </td>
                     <td className="px-4 sm:px-6 lg:px-8 py-4 text-gray-600 text-sm sm:text-base">

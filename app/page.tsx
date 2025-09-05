@@ -36,16 +36,16 @@ export default function Home() {
     { type: "image", src: "/banner-2.png", alt: "WelvetWash Water Splash" },
     { type: "image", src: "/banner-3.png", alt: "WelvetWash Laundry Capsules" },
     {
-      type: "image",
-      src: "/banner-4.png",
-      alt: "WelvetWash Gujarati Brochure",
+      type: "video",
+      src: "/banner-4.mp4",
+      alt: "WelvetWash Video  ",
     },
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex === banners.length - 1 ? 0 : prevIndex + 1,
+        prevIndex === banners.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000); // Change banner every 5 seconds
 
@@ -143,7 +143,7 @@ export default function Home() {
               </Button>
             </Link>
             <a
-              href="https://wa.me/919725550820?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?"
+              href="https://wa.me/919974398064?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?"
               target="_blank"
               rel="noopener noreferrer"
             >

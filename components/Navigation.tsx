@@ -4,16 +4,16 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
+import {
+  Menu,
+  X,
+  ChevronDown,
   Home,
   Package,
   Info,
   MessageCircle,
   ArrowRight,
-  Building
+  Building,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -22,7 +22,9 @@ export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
-  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
+    null
+  );
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -31,24 +33,28 @@ export default function Navigation() {
       setIsScrolled(scrollTop > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Handle click outside to close mobile menu
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node) && isMobileMenuOpen) {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target as Node) &&
+        isMobileMenuOpen
+      ) {
         setIsMobileMenuOpen(false);
       }
     };
 
     if (isMobileMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isMobileMenuOpen]);
 
@@ -56,7 +62,12 @@ export default function Navigation() {
     { path: "/", label: "Home", icon: Home, hasDropdown: false },
     { path: "/products", label: "Products", icon: Package, hasDropdown: true },
     { path: "/about", label: "About", icon: Info, hasDropdown: false },
-    { path: "/contact", label: "Contact", icon: MessageCircle, hasDropdown: false },
+    {
+      path: "/contact",
+      label: "Contact",
+      icon: MessageCircle,
+      hasDropdown: false,
+    },
   ];
 
   const productDropdownItems = [
@@ -92,30 +103,30 @@ export default function Navigation() {
   return (
     <>
       {/* Main Navigation */}
-      <nav 
+      <nav
         ref={navRef}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100' 
-          : 'bg-white/90 backdrop-blur-sm'
-      }`}>
+          isScrolled
+            ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100"
+            : "bg-white/90 backdrop-blur-sm"
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            
             {/* Logo Section */}
-            <Link 
-              href="/" 
-              className="flex items-center group" 
+            <Link
+              href="/"
+              className="flex items-center group"
               data-testid="link-home"
               onClick={closeMobileMenu}
             >
-              <img 
-                src="/welvet-logo.png" 
-                alt="WelvetWash Logo" 
+              <img
+                src="/welvet-logo.png"
+                alt="WelvetWash Logo"
                 className="h-40 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
               />
             </Link>
-            
+
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-1">
               {navItems.map((item) => (
@@ -129,7 +140,7 @@ export default function Navigation() {
                     href={item.path}
                     className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                       isActive(item.path)
-                        ? "bg-blue-100 text-blue-700 shadow-sm" 
+                        ? "bg-blue-100 text-blue-700 shadow-sm"
                         : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
                     }`}
                     data-testid={`link-${item.label.toLowerCase()}`}
@@ -137,15 +148,17 @@ export default function Navigation() {
                     <item.icon className="w-4 h-4" />
                     <span>{item.label}</span>
                     {item.hasDropdown && (
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        showProductsDropdown ? 'rotate-180' : ''
-                      }`} />
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          showProductsDropdown ? "rotate-180" : ""
+                        }`}
+                      />
                     )}
                   </Link>
 
                   {/* Dropdown Menu */}
                   {item.hasDropdown && showProductsDropdown && (
-                    <div 
+                    <div
                       className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
@@ -155,12 +168,18 @@ export default function Navigation() {
                           key={dropItem.path}
                           href={dropItem.path}
                           className="flex items-start space-x-3 px-4 py-3 mx-2 rounded-lg hover:bg-gray-50 transition-colors"
-                          data-testid={`dropdown-${dropItem.label.toLowerCase().replace(' ', '-')}`}
+                          data-testid={`dropdown-${dropItem.label
+                            .toLowerCase()
+                            .replace(" ", "-")}`}
                         >
                           <Package className="w-5 h-5 text-blue-600 mt-0.5" />
                           <div>
-                            <div className="font-medium text-gray-900">{dropItem.label}</div>
-                            <div className="text-sm text-gray-500">{dropItem.desc}</div>
+                            <div className="font-medium text-gray-900">
+                              {dropItem.label}
+                            </div>
+                            <div className="text-sm text-gray-500">
+                              {dropItem.desc}
+                            </div>
                           </div>
                         </Link>
                       ))}
@@ -172,17 +191,16 @@ export default function Navigation() {
 
             {/* Right Section */}
             <div className="flex items-center space-x-3">
-              
               {/* WhatsApp CTA Button */}
-              <a 
-                href="https://wa.me/919725550820?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                data-testid="button-whatsapp-quote" 
+              <a
+                href="https://wa.me/919974398064?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="button-whatsapp-quote"
                 className="hidden sm:block"
               >
-                <Button 
-                  size="sm" 
+                <Button
+                  size="sm"
                   className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg font-medium shadow-sm hover:shadow-md transition-all duration-200 flex items-center"
                 >
                   <FaWhatsapp className="w-4 h-4 mr-2" />
@@ -210,11 +228,13 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen 
-            ? 'max-h-96 opacity-100' 
-            : 'max-h-0 opacity-0 overflow-hidden'
-        }`}>
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
+          }`}
+        >
           <div className="bg-white border-t border-gray-100 shadow-lg">
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item) => (
@@ -244,7 +264,7 @@ export default function Navigation() {
                       <span className="font-medium">{item.label}</span>
                     </Link>
                   )}
-                  
+
                   {/* Mobile Product Submenu */}
                   {item.hasDropdown && (
                     <div className="ml-6 mt-2 space-y-1">
@@ -254,12 +274,18 @@ export default function Navigation() {
                           href={dropItem.path}
                           onClick={closeMobileMenu}
                           className="flex items-center space-x-3 w-full p-2 rounded-lg text-left transition-all duration-200 text-gray-500 hover:bg-gray-50 hover:text-blue-600"
-                          data-testid={`mobile-dropdown-${dropItem.label.toLowerCase().replace(' ', '-')}`}
+                          data-testid={`mobile-dropdown-${dropItem.label
+                            .toLowerCase()
+                            .replace(" ", "-")}`}
                         >
                           <Package className="w-4 h-4" />
                           <div>
-                            <div className="text-sm font-medium">{dropItem.label}</div>
-                            <div className="text-xs text-gray-400">{dropItem.desc}</div>
+                            <div className="text-sm font-medium">
+                              {dropItem.label}
+                            </div>
+                            <div className="text-xs text-gray-400">
+                              {dropItem.desc}
+                            </div>
                           </div>
                         </Link>
                       ))}
@@ -267,12 +293,12 @@ export default function Navigation() {
                   )}
                 </div>
               ))}
-              
+
               {/* Mobile WhatsApp CTA */}
               <div className="pt-4 border-t border-gray-100">
-                <a 
-                  href="https://wa.me/919725550820?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/919974398064?text=Hi! I'm interested in WelvetWash laundry pods. Can you provide me with a quote?"
+                  target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMobileMenu}
                 >

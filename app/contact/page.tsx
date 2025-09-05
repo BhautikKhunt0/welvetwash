@@ -1,4 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock, CheckCircle } from "lucide-react";
 
 export default function Contact() {
@@ -9,7 +15,8 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
-            Get in touch with Welvet Wash for any questions about our products or services.
+            Get in touch with Welvet Wash for any questions about our products
+            or services.
           </p>
         </div>
       </section>
@@ -31,9 +38,11 @@ export default function Contact() {
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Email Us</h3>
-                    <a 
-                      href="mailto:support@welvetwash.com" 
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Email Us
+                    </h3>
+                    <a
+                      href="mailto:support@welvetwash.com"
                       className="text-blue-600 hover:text-blue-700 transition-colors"
                       data-testid="link-email"
                     >
@@ -47,9 +56,11 @@ export default function Contact() {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Call Us</h3>
-                    <a 
-                      href="tel:+919974398064" 
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Call Us
+                    </h3>
+                    <a
+                      href="tel:+919974398064"
                       className="text-green-600 hover:text-green-700 transition-colors"
                       data-testid="link-phone"
                     >
@@ -63,16 +74,22 @@ export default function Contact() {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Visit Us</h3>
-                    <a 
-                      href="https://share.google/kQZYgKitHA271JklK" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Visit Us
+                    </h3>
+                    <a
+                      href="https://share.google/kQZYgKitHA271JklK"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-purple-600 hover:text-purple-700 transition-colors"
                       data-testid="link-maps"
                     >
-                      <p className="text-purple-600 hover:text-purple-700">Velocity Enterprise</p>
-                      <p className="text-purple-600 hover:text-purple-700">Ahmedabad, Gujarat, India</p>
+                      <p className="text-purple-600 hover:text-purple-700">
+                        Velocity Enterprise
+                      </p>
+                      <p className="text-purple-600 hover:text-purple-700">
+                        Ahmedabad, Gujarat, India
+                      </p>
                     </a>
                   </div>
                 </div>
@@ -82,9 +99,15 @@ export default function Contact() {
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Business Hours
+                    </h3>
+                    <p className="text-gray-600">
+                      Monday - Friday: 9:00 AM - 6:00 PM
+                    </p>
+                    <p className="text-gray-600">
+                      Saturday: 10:00 AM - 4:00 PM
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -93,29 +116,41 @@ export default function Contact() {
             {/* Why Choose Us */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl">Why Choose Welvet Wash?</CardTitle>
+                <CardTitle className="text-xl">
+                  Why Choose Welvet Wash?
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-600">Science-backed formulas for deep cleaning</span>
+                    <span className="text-gray-600">
+                      Science-backed formulas for deep cleaning
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-600">Easy-to-use formats for modern lifestyles</span>
+                    <span className="text-gray-600">
+                      Easy-to-use formats for modern lifestyles
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-600">Safe & reliable with clear guidelines</span>
+                    <span className="text-gray-600">
+                      Safe & reliable with clear guidelines
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-600">Customer-first support and service</span>
+                    <span className="text-gray-600">
+                      Customer-first support and service
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-600">8X cleaning power guarantee</span>
+                    <span className="text-gray-600">
+                      8X cleaning power guarantee
+                    </span>
                   </div>
                 </div>
               </CardContent>

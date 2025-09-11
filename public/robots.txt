@@ -1,3 +1,6 @@
+# Allow all crawlers full access
 User-agent: *
+Allow: /
 
-Sitemap: https://www.welvetwash.com/sitemap.xml
+# Sitemap location
+Sitemap: https://welvetwash.com/sitemap.xml
